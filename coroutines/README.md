@@ -1,3 +1,5 @@
+source: https://github.com/aosabook/500lines/blob/master/crawler/crawler.markdown and https://github.com/ajdavis/coroutines-demo from Pygotham 2015 https://pyvideo.org/pygotham-2015/how-do-python-coroutines-work.html
+
 title: A Web Crawler With asyncio Coroutines
 author: A. Jesse Jiryu Davis and Guido van Rossum
 <markdown>
