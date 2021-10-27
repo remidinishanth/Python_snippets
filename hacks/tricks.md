@@ -164,6 +164,11 @@ When Python executes a `def` statement, it takes some ready-made pieces (includi
 
 You can use ` foo.__name__`, `foo.__code__`, `foo.__defaults__` and `foo.__globals__` to inspect more about the function.
 
+```python
+inspect.getfullargspec(foo)
+# Output: FullArgSpec(args=['x'], varargs=None, varkw=None, defaults=([1, 1, 1],), kwonlyargs=[], kwonlydefaults=None, annotations={})
+```
+
 Instead, you should use a sentinel value denoting "not given" and replace with the mutable you'd like as default:
 
 ```python
