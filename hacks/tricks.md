@@ -35,3 +35,25 @@ Out[5]: True
 In [6]: 5 == x > 4
 Out[6]: True
 ```
+
+### Decorators
+
+Decorators allow to wrap a function or method in another function that can add functionality, modify arguments or results, etc. You write decorators one line above the function definition, beginning with an "at" sign (@).
+
+```python
+def print_args(function):
+    def wrapper(*args, **kwargs):
+        print('Arguments:', args, kwargs)
+        return function(*args, **kwargs)
+    return wrapper
+    
+@print_args
+def write(text):
+    print(text)
+    
+write('foo')
+
+# Output:
+# Arguments: ('foo',) {}
+# foo
+ ````
