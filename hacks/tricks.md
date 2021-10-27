@@ -160,6 +160,8 @@ foo()  # [1, 1]
 foo()  # [1, 1, 1]
 ```
 
+When Python executes a `def` statement, it takes some ready-made pieces (including the compiled code for the function body and the current namespace), and creates a new function object. When it does this, it also evaluates the default values.
+
 You can use ` foo.__name__`, `foo.__code__`, `foo.__defaults__` and `foo.__globals__` to inspect more about the function.
 
 Instead, you should use a sentinel value denoting "not given" and replace with the mutable you'd like as default:
