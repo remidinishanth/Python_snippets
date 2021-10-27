@@ -192,3 +192,5 @@ def myfunc(value=sentinel):
         value = expression
     # use/modify value here
 ```
+
+# TODO: https://www.codingame.com/playgrounds/2302/best-tricks-of-python
