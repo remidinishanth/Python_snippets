@@ -57,3 +57,58 @@ write('foo')
 # Arguments: ('foo',) {}
 # foo
  ````
+
+In Python, functions are first class objects that mean that functions in Python can be used or passed as arguments.
+
+```python
+
+# Python program to illustrate functions
+# can be passed as arguments to other functions
+def shout(text):
+    return text.upper()
+ 
+def whisper(text):
+    return text.lower()
+ 
+def greet(func):
+    # storing the function in a variable
+    greeting = func("""Hi, I am created by a function passed as an argument.""")
+    print (greeting)
+ 
+greet(shout)
+greet(whisper)
+
+## Output:
+## HI, I AM CREATED BY A FUNCTION PASSED AS AN ARGUMENT.
+## hi, i am created by a function passed as an argument.
+```
+
+```python
+# Python program to illustrate functions
+# Functions can return another function
+ 
+def create_adder(x):
+    def adder(y):
+        return x+y
+ 
+    return adder
+ 
+add_15 = create_adder(15)
+ 
+print(add_15(10))
+```
+
+Decorators
+
+```
+@gfg_decorator
+def hello_decorator():
+    print("Gfg")
+
+'''Above code is equivalent to -
+
+def hello_decorator():
+    print("Gfg")
+    
+hello_decorator = gfg_decorator(hello_decorator)'''
+```
