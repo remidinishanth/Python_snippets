@@ -98,7 +98,7 @@ add_15 = create_adder(15)
 print(add_15(10))
 ```
 
-Decorators
+Decorators - This behaviour is the syntactic sugar because writing `@decorator` above the function definition is the same as calling `f = decorator(f)` after it.
 
 ```python
 @gfg_decorator
