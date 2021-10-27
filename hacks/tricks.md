@@ -18,6 +18,8 @@ def make_complex(x, y):
 
 A Global symbol table stores all information related to the global scope of the program, and is accessed in Python using `globals()` method.
 
+Read about namespaces at https://www.programiz.com/python-programming/namespace
+
 ### Argument Unpacking
 
 You can unpack a list or a dictionary as function arguments using `*` and `**`.
