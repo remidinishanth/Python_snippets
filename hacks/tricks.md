@@ -160,6 +160,8 @@ foo()  # [1, 1]
 foo()  # [1, 1, 1]
 ```
 
+You can use ` foo.__name__`, `foo.__code__`, `foo.__defaults__` and `foo.__globals__` to inspect more about the function.
+
 Instead, you should use a sentinel value denoting "not given" and replace with the mutable you'd like as default:
 
 ```python
