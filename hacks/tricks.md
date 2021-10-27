@@ -112,3 +112,18 @@ def hello_decorator():
     
 hello_decorator = gfg_decorator(hello_decorator)'''
 ```
+
+Decarators can also take arguments.
+
+When using decorators, the wrapped function’s signature such as its `__name__` are lost and replaced by that of the wrapper function. To avoid this, `functools.wraps` comes into play.
+
+```python
+from functools import wraps
+def money_format(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        r = func(*args, **kwargs)
+        formatted = '£{:.2f}'.format(r)
+        return formatted
+    return wrapper
+```
