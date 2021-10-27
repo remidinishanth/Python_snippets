@@ -172,3 +172,14 @@ def foo(x=None):
 foo()  # [1]
 foo()  # [1]
 ```
+
+If you need to handle arbitrary objects (including None), you can use a sentinel object:
+
+```python
+sentinel = object()
+
+def myfunc(value=sentinel):
+    if value is sentinel:
+        value = expression
+    # use/modify value here
+```
