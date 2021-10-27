@@ -20,6 +20,9 @@ A Global symbol table stores all information related to the global scope of the 
 
 Read about namespaces at https://www.programiz.com/python-programming/namespace
 
+![image](https://user-images.githubusercontent.com/19663316/139116283-e907f849-b33a-4280-aae6-0262a9d3e634.png)
+
+
 ### Argument Unpacking
 
 You can unpack a list or a dictionary as function arguments using `*` and `**`.
