@@ -1,3 +1,22 @@
+### Locals
+
+The `locals()` method updates and returns a dictionary of the current local symbol table.
+
+A symbol table is a data structure maintained by a compiler which contains all necessary information about the program.
+
+
+```python
+def make_complex(*args):
+    x, y = args
+    return dict(**locals())
+    
+# The above is same as
+
+def make_complex(x, y):
+    return {'x': x, 'y': y}
+```
+
+
 ### Argument Unpacking
 
 You can unpack a list or a dictionary as function arguments using `*` and `**`.
