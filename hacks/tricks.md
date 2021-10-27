@@ -146,3 +146,29 @@ def money_format(func):
 ```
 
 REF: https://medium.com/python-monkey/function-decorators-74c08b9493bf
+
+
+# Default Argument Gotchas / Dangers of Mutable Default arguments
+
+```python
+def foo(x=[]):
+    x.append(1)
+    print(x)
+    
+foo()  # [1]
+foo()  # [1, 1]
+foo()  # [1, 1, 1]
+```
+
+Instead, you should use a sentinel value denoting "not given" and replace with the mutable you'd like as default:
+
+```python
+def foo(x=None):
+    if x is None:
+        x = []
+    x.append(1)
+    print(x)
+    
+foo()  # [1]
+foo()  # [1]
+```
