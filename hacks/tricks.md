@@ -100,7 +100,7 @@ print(add_15(10))
 
 Decorators
 
-```
+```python
 @gfg_decorator
 def hello_decorator():
     print("Gfg")
