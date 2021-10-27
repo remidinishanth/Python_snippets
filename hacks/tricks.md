@@ -16,6 +16,7 @@ def make_complex(x, y):
     return {'x': x, 'y': y}
 ```
 
+A Global symbol table stores all information related to the global scope of the program, and is accessed in Python using `globals()` method.
 
 ### Argument Unpacking
 
