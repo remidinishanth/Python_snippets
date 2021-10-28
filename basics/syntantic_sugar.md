@@ -6,7 +6,7 @@ my_list == “value”     ->      my_list.__eq__(“value”)
 my_list[7]             ->      my_list.__getitem__(7)
 ```
 
-```
+```python
 @decorator # syntax    ->      func = decorator(func)
 ```
 
