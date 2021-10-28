@@ -28,4 +28,10 @@ big_number = 1_000_000_000
 
 a += 1
 # equivalent to a = a + 1
+
+
+>>> mylist = [1,2,3,4]
+>>> mylist *= 4
+>>> print(mylist)
+[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 ```
