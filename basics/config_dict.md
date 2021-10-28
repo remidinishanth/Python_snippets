@@ -1,3 +1,4 @@
+## 1
 Updating the module dictionary so that we can use config.VAR_NAME while accessing the variable
 
 ```python
@@ -17,6 +18,31 @@ def load_config(config_file):
 
 Read more at https://stackoverflow.com/questions/5365562/why-is-the-value-of-name-changing-after-assignment-to-sys-modules-name
 
+## 2
+Using SimpleNamespace
+
+```python
+>>> from types import SimpleNamespace
+>>> d = {'key1': 'value1', 'key2': 'value2'}
+>>> n = SimpleNamespace(**d)
+>>> print(n)
+namespace(key1='value1', key2='value2')
+>>> n.key2
+'value2'
+```
+
+Adding, modifying and removing values is achieved with regular attribute access, i.e. you can use statements like `n.key = val` and `del n.key`.
+
+To go back to a dict again:
+
+```python
+>>> vars(n)
+{'key1': 'value1', 'key2': 'value2'}
+```
+
+source: https://stackoverflow.com/questions/16279212/how-to-use-dot-notation-for-dict-in-python
+
+## 3
 Nested get using dot convention, source: https://github.com/robertchase/ergaleia/blob/master/ergaleia/nested_get.py
 
 ```python
@@ -73,6 +99,8 @@ class TestNestedGet(TestCase):
         self.assertIsNone(nested_get(data, 'a.b.c'))
 ```
 
+## 4
+
 Using dot while accesing dict variables
 
 ```python
@@ -93,4 +121,4 @@ mydict.nested.val
 # 'nested works too'
 ```
 
-source: https://stackoverflow.com/questions/2352181/how-to-use-a-dot-to-access-members-of-dictionary
+source: https://stackoverflow.com/questions/2352181/how-to-use-a-dot-to-access-members-of-dictionary, Check other answers too
