@@ -22,6 +22,27 @@ Read about namespaces at https://www.programiz.com/python-programming/namespace
 
 ![image](https://user-images.githubusercontent.com/19663316/139116283-e907f849-b33a-4280-aae6-0262a9d3e634.png)
 
+```python
+def outer_function():
+    a = 20
+
+    def inner_function():
+        a = 30
+        print('a =', a)
+
+    inner_function()
+    print('a =', a)
+
+
+a = 10
+outer_function()
+print('a =', a)
+
+## Ouput:
+# a = 30
+# a = 20
+# a = 10
+```
 
 ### Argument Unpacking
 
