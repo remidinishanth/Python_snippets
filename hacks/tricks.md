@@ -282,7 +282,7 @@ def factorial(n):
         raise OverflowError("n too large")
     result = 1
     factor = 2
-    while factor &lt;= n:
+    while factor <= n:
         result *= factor
         factor += 1
     return result
