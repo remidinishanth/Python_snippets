@@ -1,4 +1,4 @@
-### Locals
+## Locals
 
 The `locals()` method updates and returns a dictionary of the current local symbol table.
 
@@ -44,7 +44,7 @@ print('a =', a)
 # a = 10
 ```
 
-### Argument Unpacking
+## Argument Unpacking
 
 You can unpack a list or a dictionary as function arguments using `*` and `**`.
 
@@ -61,7 +61,7 @@ draw_point(**point_bar)
 
 Very useful shortcut since lists, tuples and dicts are widely used as containers.
 
-### Chaining Comparison Operators
+## Chaining Comparison Operators
 
 ```python
 In [1]: x = 5
@@ -82,7 +82,7 @@ In [6]: 5 == x > 4
 Out[6]: True
 ```
 
-### Decorators
+## Decorators
 
 Decorators allow to wrap a function or method in another function that can add functionality, modify arguments or results, etc. You write decorators one line above the function definition, beginning with an "at" sign (@).
 
@@ -205,7 +205,7 @@ def money_format(func):
 REF: https://medium.com/python-monkey/function-decorators-74c08b9493bf
 
 
-# Default Argument Gotchas / Dangers of Mutable Default arguments
+## Default Argument Gotchas / Dangers of Mutable Default arguments
 
 ```python
 def foo(x=[]):
@@ -250,6 +250,49 @@ def myfunc(value=sentinel):
     if value is sentinel:
         value = expression
     # use/modify value here
+```
+
+## Docstring Tests
+
+Doctest: documentation and unit-testing at the same time. Example extracted from the Python documentation:
+
+```python
+def factorial(n):
+    """Return the factorial of n, an exact integer >= 0.
+
+    If the result is small enough to fit in an int, return an int.
+    Else return a long.
+
+    >>> [factorial(n) for n in range(6)]
+    [1, 1, 2, 6, 24, 120]
+    >>> factorial(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: n must be >= 0
+
+    Factorials of floats are OK, but the float must be an exact integer:
+    """
+
+    import math
+    if not n >= 0:
+        raise ValueError("n must be >= 0")
+    if math.floor(n) != n:
+        raise ValueError("n must be exact integer")
+    if n+1 == n:  # catch a value like 1e300
+        raise OverflowError("n too large")
+    result = 1
+    factor = 2
+    while factor &lt;= n:
+        result *= factor
+        factor += 1
+    return result
+
+def _test():
+    import doctest
+    doctest.testmod()    
+
+if __name__ == "__main__":
+    _test()
 ```
 
 TODO: https://www.codingame.com/playgrounds/2302/best-tricks-of-python
