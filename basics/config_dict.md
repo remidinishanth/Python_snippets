@@ -16,3 +16,26 @@ def load_config(config_file):
 
 
 Read more at https://stackoverflow.com/questions/5365562/why-is-the-value-of-name-changing-after-assignment-to-sys-modules-name
+
+
+Using dot while accesing dict variables
+
+```
+class dotdict(dict):
+    """dot.notation access to dictionary attributes"""
+    __getattr__ = dict.get
+    __setattr__ = dict.__setitem__
+    __delattr__ = dict.__delitem__
+
+mydict = {'val':'it works'}
+nested_dict = {'val':'nested works too'}
+mydict = dotdict(mydict)
+mydict.val
+# 'it works'
+
+mydict.nested = dotdict(nested_dict)
+mydict.nested.val
+# 'nested works too'
+```
+
+source: https://stackoverflow.com/questions/2352181/how-to-use-a-dot-to-access-members-of-dictionary
