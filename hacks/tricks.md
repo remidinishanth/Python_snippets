@@ -178,6 +178,17 @@ def generate_bonus():
 generate_bonus()  # Ouput:  '£250'
 ```
 
+```python
+@f1(arg)
+@f2
+def func(): pass
+
+# is roughly equivalent to
+
+def func(): pass
+func = f1(arg)(f2(func))
+```
+
 When using decorators, the wrapped function’s signature such as its `__name__` are lost and replaced by that of the wrapper function. To avoid this, `functools.wraps` comes into play.
 
 ```python
