@@ -32,6 +32,8 @@ big_number = 1_000_000_000
 a += 1
 # equivalent to a = a + 1
 
+x = something if condition else otherthing
+# Ternary operator
 
 # List “Multiplication”
 >>> mylist = [1,2,3,4]
