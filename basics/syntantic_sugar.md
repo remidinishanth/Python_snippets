@@ -41,3 +41,5 @@ x = something if condition else otherthing
 >>> print(mylist)
 [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 ```
+
+TODO: https://snarky.ca/tag/syntactic-sugar/
