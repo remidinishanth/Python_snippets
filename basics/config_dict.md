@@ -19,6 +19,8 @@ def load_config(config_file):
 Read more at https://stackoverflow.com/questions/5365562/why-is-the-value-of-name-changing-after-assignment-to-sys-modules-name
 
 ## 2
+This functionality already [exists in the standard libraries](https://docs.python.org/3/library/types.html#types.SimpleNamespace), so I recommend you just use their class.
+
 Using SimpleNamespace
 
 ```python
@@ -39,6 +41,10 @@ To go back to a dict again:
 >>> vars(n)
 {'key1': 'value1', 'key2': 'value2'}
 ```
+
+The keys in your dict should be string identifiers for attribute access to work properly.
+
+Simple namespace was added in Python 3.3. For older versions of the language, argparse.Namespace has similar behaviour.
 
 source: https://stackoverflow.com/questions/16279212/how-to-use-dot-notation-for-dict-in-python
 
