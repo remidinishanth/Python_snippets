@@ -295,4 +295,32 @@ if __name__ == "__main__":
     _test()
 ```
 
+We can use `testmod(name ='factorial', verbose = True)` if we want to see verbose results
+
+```
+In [21]: doctest.testmod(name ='factorial', verbose = True)
+Trying:
+    [factorial(n) for n in range(6)]
+Expecting:
+    [1, 1, 2, 6, 24, 120]
+ok
+Trying:
+    factorial(-1)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    ValueError: n must be >= 0
+ok
+2 items had no tests:
+    factorial
+    factorial._test
+1 items passed all tests:
+   2 tests in factorial.factorial
+2 tests in 3 items.
+2 passed and 0 failed.
+Test passed.
+
+Out[21]: TestResults(failed=0, attempted=2)
+```
+
 TODO: https://www.codingame.com/playgrounds/2302/best-tricks-of-python
