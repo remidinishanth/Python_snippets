@@ -7,6 +7,10 @@ my_list[7]             ->      my_list.__getitem__(7)
 ```
 
 ```
+@decorator # syntax    ->      func = decorator(func)
+```
+
+```python
 1 < x < 10
 # equivalent to 1 < x and x < 10
 
