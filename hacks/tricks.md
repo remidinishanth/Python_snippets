@@ -226,6 +226,8 @@ inspect.getfullargspec(foo)
 # Output: FullArgSpec(args=['x'], varargs=None, varkw=None, defaults=([1, 1, 1],), kwonlyargs=[], kwonlydefaults=None, annotations={})
 ```
 
+Default parameter values are evaluated from left to right when the function definition is executed. This means that the expression is evaluated once, when the function is defined, and that the same “pre-computed” value is used for each call. This is especially important to understand when a default parameter value is a mutable object, such as a list or a dictionary: if the function modifies the object (e.g. by appending an item to a list), the default parameter value is in effect modified. This is generally not what was intended. A way around this is to use None as the default, and explicitly test for it in the body of the function. source: https://docs.python.org/3/reference/compound_stmts.html#function-definitions
+
 Instead, you should use a sentinel value denoting "not given" and replace with the mutable you'd like as default:
 
 ```python
