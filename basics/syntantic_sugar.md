@@ -30,6 +30,7 @@ a += 1
 # equivalent to a = a + 1
 
 
+# List “Multiplication”
 >>> mylist = [1,2,3,4]
 >>> mylist *= 4
 >>> print(mylist)
