@@ -1,3 +1,8 @@
+## Simple HTTP server
+
+`python3 -m http.server` which serves the current directory on HTTP
+
+
 ## Locals
 
 The `locals()` method updates and returns a dictionary of the current local symbol table.
