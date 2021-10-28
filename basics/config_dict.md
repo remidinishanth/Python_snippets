@@ -20,7 +20,7 @@ Read more at https://stackoverflow.com/questions/5365562/why-is-the-value-of-nam
 
 Using dot while accesing dict variables
 
-```
+```python
 class dotdict(dict):
     """dot.notation access to dictionary attributes"""
     __getattr__ = dict.get
