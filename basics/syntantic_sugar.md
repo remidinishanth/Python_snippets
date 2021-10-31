@@ -42,4 +42,7 @@ x = something if condition else otherthing
 [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 ```
 
+* Attribute access in Python - `obj.attr` is syntax for `getattr(obj, "attr")`
+
+
 TODO: https://snarky.ca/tag/syntactic-sugar/
