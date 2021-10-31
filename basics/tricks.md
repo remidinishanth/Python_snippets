@@ -2,6 +2,10 @@
 
 `python3 -m http.server` which serves the current directory on HTTP
 
+## Descriptors
+
+There are two kinds of descriptors: data and non-data. Both kind of descriptors define a `__get__` method for getting what the attribute should be. Data descriptors also define `__set__` and `__delete__` methods while non-data descriptors do not; `property` is a data descriptor, `classmethod` and `staticmethod` are non-data descriptors
+
 
 ## Locals
 
