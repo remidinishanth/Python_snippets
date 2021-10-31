@@ -46,5 +46,8 @@ x = something if condition else otherthing
 
 Attribute access on an object is implemented via two special methods. The first method is `__getattribute__()` which is called when trying to access any and all attributes. The second is `__getattr__()` which is called when `__getattribute__()` raises an `AttributeError`. The former method is (nowadays) always expected to be defined while the latter method is optional.
 
+![image](https://user-images.githubusercontent.com/19663316/139597874-e9e323e6-e9e5-4e7c-b0ca-6383ce751009.png)
+
+
 
 TODO: https://snarky.ca/tag/syntactic-sugar/
