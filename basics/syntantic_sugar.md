@@ -50,4 +50,4 @@ Attribute access on an object is implemented via two special methods. The first 
 
 
 
-TODO: https://snarky.ca/tag/syntactic-sugar/
+TODO: https://snarky.ca/tag/syntactic-sugar/ and https://github.com/brettcannon/desugar
