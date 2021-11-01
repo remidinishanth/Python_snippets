@@ -54,6 +54,9 @@ a = __import__("a", globals(), locals())
 
 # import a.b
 a = __import__("a.b", globals(), locals())
+
+# from a.b import c
+c = __import__('a.b', globals(), locals(), ['c']).c
 ```
 
 TODO: https://snarky.ca/tag/syntactic-sugar/ and https://github.com/brettcannon/desugar
