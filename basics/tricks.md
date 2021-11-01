@@ -352,5 +352,12 @@ Out[21]: TestResults(failed=0, attempted=2)
 
 ![image](https://user-images.githubusercontent.com/19663316/139642584-61b80899-621c-4af6-bcc0-bc512b2a4ee4.png)
 
+## Metaclass
+
+![image](https://user-images.githubusercontent.com/19663316/139643326-4f99ebb5-0f52-4ea2-9c03-e2d16948885e.png)
+
+![image](https://user-images.githubusercontent.com/19663316/139643255-1d4ce1bf-a5ba-4406-925f-9f15f55c5704.png)
+
+## Metaclass
 
 TODO: https://www.codingame.com/playgrounds/2302/best-tricks-of-python
