@@ -11,6 +11,7 @@ There are two kinds of descriptors: data and non-data. Both kind of descriptors 
 `classmethod` is useful whenever you want to return the instance of class/subclass. In the following example, it can return any subclass of `FancyDict` instead of `FancyDict` itself. `classmethod` is useful whenever you want to do something with the first argument `cls`.
 ![image](https://user-images.githubusercontent.com/19663316/139637707-6903b5bd-4d80-4738-838e-3a81c181de03.png)
 
+![image](https://user-images.githubusercontent.com/19663316/139638103-6d5b7028-1ce7-4c23-bb6b-d29341268b61.png)
 
 ## Locals
 
