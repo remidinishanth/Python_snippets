@@ -2,9 +2,22 @@
 
 ![image](https://user-images.githubusercontent.com/19663316/139644907-907b8036-6f5c-4171-b204-380104724799.png)
 
+### Function creation
 ![image](https://user-images.githubusercontent.com/19663316/139645012-c2b19391-adf1-444d-b969-5ec069c9dde3.png)
 
+Red and Blue(Default argument) part are executed when the code is reached.
 ![image](https://user-images.githubusercontent.com/19663316/139645076-4c6195eb-65a4-4f3a-8f6f-279c61fee3d1.png)
+
+Green part is only executed when the function is called
+![image](https://user-images.githubusercontent.com/19663316/139645367-d8b48e45-6334-447b-8457-ed0d16061442.png)
+
+### Class creation
+
+![image](https://user-images.githubusercontent.com/19663316/139645521-e8651f90-14a6-494a-b020-9ff011104225.png)
+
+![image](https://user-images.githubusercontent.com/19663316/139645623-0002cfd6-19f8-4bc6-912f-34498e267321.png)
+
+![image](https://user-images.githubusercontent.com/19663316/139645696-18084d85-847e-4fe9-8619-680211291674.png)
 
 source: Thomas Wouters: Advanced Python (or understanding Python) (Google)
 
