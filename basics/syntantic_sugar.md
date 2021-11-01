@@ -63,6 +63,9 @@ b = __import__('a', globals(), locals(), ['b'], 2).b
 
 # import a as b
 b = __import__("a", globals(), locals())
+
+# from .a import b as c
+c = __import__('a', globals(), locals(), ['b'], 1).b
 ```
 
 TODO: https://snarky.ca/tag/syntactic-sugar/ and https://github.com/brettcannon/desugar
