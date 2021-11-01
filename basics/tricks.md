@@ -8,7 +8,7 @@ There are two kinds of descriptors: data and non-data. Both kind of descriptors 
 
 ![image](https://user-images.githubusercontent.com/19663316/139637596-823079af-4671-45fe-89db-ff7fe7f0287c.png)
 
-`classmethod` is useful whenever you want to return the instance of class/subclass.
+`classmethod` is useful whenever you want to return the instance of class/subclass. In the following example, it can return any subclass of `FancyDict` instead of `FancyDict` itself.
 ![image](https://user-images.githubusercontent.com/19663316/139637707-6903b5bd-4d80-4738-838e-3a81c181de03.png)
 
 
