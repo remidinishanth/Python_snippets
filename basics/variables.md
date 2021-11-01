@@ -16,4 +16,8 @@
 
 ![image](https://user-images.githubusercontent.com/19663316/139729939-60a905ba-cd86-46a1-a800-35d402169ebb.png)
 
+![image](https://user-images.githubusercontent.com/19663316/139730597-ffa92bbb-81e0-4bd6-a3ed-af2bdc5680b9.png)
+
+![image](https://user-images.githubusercontent.com/19663316/139730525-23758126-7627-4b3d-a614-bb63db70e5e0.png)
+
 source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015, https://nedbatchelder.com/text/names.html
