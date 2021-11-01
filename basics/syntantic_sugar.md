@@ -68,4 +68,28 @@ b = __import__("a", globals(), locals())
 c = __import__('a', globals(), locals(), ['b'], 1).b
 ```
 
+* async with
+```python
+async for a in b:
+    c
+else:
+    d
+    
+    
+    
+_iter = aiter(b)
+_looping = True
+while _looping:
+    try:
+        a = await anext(_iter)
+    except StopAsyncIteration:
+        _looping = False
+        continue
+    else:
+        c
+else:
+    d
+del _iter, _looping
+```
+
 TODO: https://snarky.ca/tag/syntactic-sugar/ and https://github.com/brettcannon/desugar
