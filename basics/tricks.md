@@ -1,3 +1,13 @@
+## Python Design
+
+![image](https://user-images.githubusercontent.com/19663316/139644907-907b8036-6f5c-4171-b204-380104724799.png)
+
+![image](https://user-images.githubusercontent.com/19663316/139645012-c2b19391-adf1-444d-b969-5ec069c9dde3.png)
+
+![image](https://user-images.githubusercontent.com/19663316/139645076-4c6195eb-65a4-4f3a-8f6f-279c61fee3d1.png)
+
+source: Thomas Wouters: Advanced Python (or understanding Python) (Google)
+
 ## Simple HTTP server
 
 `python3 -m http.server` which serves the current directory on HTTP
