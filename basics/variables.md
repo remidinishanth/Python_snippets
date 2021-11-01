@@ -18,6 +18,12 @@
 
 ![image](https://user-images.githubusercontent.com/19663316/139730597-ffa92bbb-81e0-4bd6-a3ed-af2bdc5680b9.png)
 
+```python
+board = [[0]*8]*8
+
+board1 = [[0]*8 for _ in range(8)]
+```
+
 ![image](https://user-images.githubusercontent.com/19663316/139730525-23758126-7627-4b3d-a614-bb63db70e5e0.png)
 
 source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015, https://nedbatchelder.com/text/names.html
