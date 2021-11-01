@@ -58,7 +58,7 @@ a = __import__("a.b", globals(), locals())
 # from a.b import c
 c = __import__('a.b', globals(), locals(), ['c']).c
 
-# from ..a import b, relative import
+# from ..a import b, relative import, essentially involves counting
 b = __import__('a', globals(), locals(), ['b'], 2).b
 
 # import a as b
