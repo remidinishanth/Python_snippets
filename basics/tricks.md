@@ -350,5 +350,7 @@ Out[21]: TestResults(failed=0, attempted=2)
 ## `__new__`
 ![image](https://user-images.githubusercontent.com/19663316/139640774-c0d1e4c7-1a82-46d9-931c-a56ddfe154dc.png)
 
+![image](https://user-images.githubusercontent.com/19663316/139642584-61b80899-621c-4af6-bcc0-bc512b2a4ee4.png)
+
 
 TODO: https://www.codingame.com/playgrounds/2302/best-tricks-of-python
