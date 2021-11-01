@@ -70,6 +70,8 @@ c = __import__('a', globals(), locals(), ['b'], 1).b
 
 * `for ...`
 
+The statements in the else block are executed if execution falls off the bottom of the try - if there was no exception.
+
 ```python
 for a in b:
     c
