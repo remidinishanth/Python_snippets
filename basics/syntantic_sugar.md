@@ -68,6 +68,24 @@ b = __import__("a", globals(), locals())
 c = __import__('a', globals(), locals(), ['b'], 1).b
 ```
 
+* `for ...`
+
+```python
+for a in b:
+    c
+    
+
+_iter = iter(b)
+while True:
+    try:
+        a = next(_iter)
+    except StopIteration:
+        break
+    else:
+        c
+del _iter
+```    
+
 * async with
 ```python
 async for a in b:
