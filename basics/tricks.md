@@ -347,6 +347,7 @@ Out[21]: TestResults(failed=0, attempted=2)
 
 ![image](https://user-images.githubusercontent.com/19663316/139640665-17170d12-3665-48a7-96aa-4fb3e968debc.png)
 
+## `__new__`
 ![image](https://user-images.githubusercontent.com/19663316/139640774-c0d1e4c7-1a82-46d9-931c-a56ddfe154dc.png)
 
 
