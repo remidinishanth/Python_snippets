@@ -49,8 +49,11 @@ Attribute access on an object is implemented via two special methods. The first 
 ![image](https://user-images.githubusercontent.com/19663316/139597874-e9e323e6-e9e5-4e7c-b0ca-6383ce751009.png)
 
 * `import a` syntactic sugar
-```
+```python
 a = __import__("a", globals(), locals())
+
+# import a.b
+a = __import__("a.b", globals(), locals())
 ```
 
 TODO: https://snarky.ca/tag/syntactic-sugar/ and https://github.com/brettcannon/desugar
