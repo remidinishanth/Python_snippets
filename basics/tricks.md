@@ -6,6 +6,8 @@
 
 There are two kinds of descriptors: data and non-data. Both kind of descriptors define a `__get__` method for getting what the attribute should be. Data descriptors also define `__set__` and `__delete__` methods while non-data descriptors do not; `property` is a data descriptor, `classmethod` and `staticmethod` are non-data descriptors
 
+![image](https://user-images.githubusercontent.com/19663316/139637596-823079af-4671-45fe-89db-ff7fe7f0287c.png)
+
 
 ## Locals
 
