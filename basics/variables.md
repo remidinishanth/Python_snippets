@@ -8,4 +8,4 @@
 
 ![image](https://user-images.githubusercontent.com/19663316/139728752-a00e9d19-e0a4-468a-80cb-62eb884bc814.png)
 
-source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015
+source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015, https://nedbatchelder.com/text/names.html
