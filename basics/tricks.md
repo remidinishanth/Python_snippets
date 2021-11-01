@@ -198,6 +198,10 @@ def func(): pass
 func = f1(arg)(f2(func))
 ```
 
+If you apply decorator, the name and doc string etc are lost.
+![image](https://user-images.githubusercontent.com/19663316/139637015-a6145b69-671e-4140-ba88-e5d8391518cc.png)
+
+
 When using decorators, the wrapped function’s signature such as its `__name__` are lost and replaced by that of the wrapper function. To avoid this, `functools.wraps` comes into play.
 
 ```python
