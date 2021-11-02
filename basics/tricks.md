@@ -384,3 +384,5 @@ Out[21]: TestResults(failed=0, attempted=2)
 ## Metaclass
 
 TODO: https://www.codingame.com/playgrounds/2302/best-tricks-of-python
+
+TODO: https://rednafi.github.io/digressions/python/2020/03/26/python-contextmanager.html
