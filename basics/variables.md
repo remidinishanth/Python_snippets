@@ -12,6 +12,128 @@
 
 ![image](https://user-images.githubusercontent.com/19663316/139728553-393bdb3a-c0a3-4b10-a507-93bfe47e837c.png)
 
+```python
+>>> dict = {'a':1,'b':2}
+>>> list = dict.values()
+>>> list
+[1, 2]
+>>> dict['a']=3
+>>> list
+[1, 2]
+>>> dict
+{'a': 3, 'b': 2}
+
+# If you have lists
+
+In [1]: dict = {'a':[1],'b':[2]}
+
+In [2]: list = dict.values()
+
+In [3]: list
+Out[3]: dict_values([[1], [2]])
+
+In [4]: dict['a'].append(3)
+
+In [5]: dict
+Out[5]: {'a': [1, 3], 'b': [2]}
+
+In [6]: list
+Out[6]: dict_values([[1, 3], [2]])
+```
+
+```
+First, some terminology.  Actually, the very first thing is some
+anti-terminology; I find the word "variable" to be particularly
+uphelpful in a Python context.  I prefer "names", "bindings" and
+"objects".
+
+Names look like this:
+
+    ,-----.
+    | foo |
+    `-----'
+
+Names live in namespaces, but that's not really important for the
+matter at hand as the only namespace in play is the one associated
+with the read-eval-print loop of the interpreter.  In fact names are
+only minor players in the current drama; bindings and objects are the
+real stars.
+
+Bindings look like this:
+
+    ------------>
+
+Bindings' left ends can be attached to names, or other "places" such
+as attributes of objects and entries in lists or dictionaries.  Their
+right hand ends are always attached to objects[[2]](http://python.net/crew/mwh/hacks/objectthink.html).
+
+Objects look like this:
+
+    +-------+
+    | "bar" |
+    +-------+
+```
+
+```
+dict = {'a':1,'b':2}
+
+After this statement, it would seem appropriate to draw this picture:
+
+    ,------.       +-------+
+    | dict |------>|+-----+|     +---+
+    `------'       || "a" |+---->| 1 |
+                   |+-----+|     +---+
+                   |+-----+|     +---+
+                   || "b" |+---->| 2 |
+                   |+-----+|     +---+
+                   +-------+
+                   
+list = dict.values()
+
+Now this:
+
+    ,------.       +-------+
+    | dict |------>|+-----+|             +---+
+    `------'       || "a" |+------------>| 1 |
+                   |+-----+|             +---+
+                   |+-----+|              /\
+                   || "b" |+-----.    ,---'
+                   |+-----+|     |    |
+                   +-------+     `----+----.
+                                      |    |
+    ,------.       +-----+            |    \/
+    | list |------>| [0]-+------------'   +---+
+    `------'       | [1]-+--------------->| 2 |
+                   +-----+                +---+
+
+dict['a']=3
+
+Now this:
+
+
+    ,------.       +-------+
+    | dict |------>|+-----+|             +---+
+    `------'       || "a" |+-.           | 1 |
+                   |+-----+| |           +---+
+                   |+-----+| |            /\
+                   || "b" |+-+---.    ,---'
+                   |+-----+| |   |    |
+                   +-------+ |   `----+----.
+                             |        |    |
+    ,------.       +-----+   |        |    \/
+    | list |------>| [0]-+---+--------'   +---+
+    `------'       | [1]-+---+----------->| 2 |
+                   +-----+   |            +---+
+                             |            +---+
+                             `----------->| 3 |
+                                          +---+
+
+
+list # [1, 2]
+
+dict # {'a': 3, 'b': 2}
+```
+
 ![image](https://user-images.githubusercontent.com/19663316/139728487-c8d48484-24e9-47c4-919b-6427a53941bb.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/139728752-a00e9d19-e0a4-468a-80cb-62eb884bc814.png)
