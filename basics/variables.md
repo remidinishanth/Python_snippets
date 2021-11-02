@@ -136,6 +136,8 @@ list # [1, 2]
 dict # {'a': 3, 'b': 2}
 ```
 
+The objects returned by `dict.keys()`, `dict.values()` and `dict.items()` are view objects. They provide a dynamic view on the dictionary’s entries, which means that when the dictionary changes, the view reflects these changes.
+
 ```
 > >>> dict = {'a':[1],'b':[2]}
 
