@@ -12,6 +12,8 @@
 
 ![image](https://user-images.githubusercontent.com/19663316/139728553-393bdb3a-c0a3-4b10-a507-93bfe47e837c.png)
 
+* In python, think in terms of "names", "bindings" and "objects".
+
 ```python
 >>> dict = {'a':1,'b':2}
 >>> list = dict.values()
