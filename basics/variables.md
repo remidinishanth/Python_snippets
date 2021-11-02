@@ -219,3 +219,5 @@ board1 = [[0]*8 for _ in range(8)]
 ![image](https://user-images.githubusercontent.com/19663316/139730525-23758126-7627-4b3d-a614-bb63db70e5e0.png)
 
 source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015, https://nedbatchelder.com/text/names.html
+
+TODO: https://mathspp.com/blog/pydonts/inner-workings-of-sequence-slicing
