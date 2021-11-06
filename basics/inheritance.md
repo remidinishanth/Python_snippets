@@ -196,4 +196,5 @@ Things to Note
 * Design and document for inheritance `JSONEncoder`. Example: https://docs.python.org/3/library/json.html#json.JSONEncoder
 * When using inheritance never forget the Liskov Substituion Principle(LSP) - functions that use references to base class objects must be able to use objects of derived classes without knowing it.
 
+You need to make sure that subclasses actually work as the corresponding superclass should work.
 ![image](https://user-images.githubusercontent.com/19663316/140602782-0e007bfc-0924-432d-ade9-9ac010e38209.png)
