@@ -16,7 +16,7 @@ Disadvantage of Inheritance
 * A derived class inherits everything, even things it doesn't need or want
 * Changes in a base class interface impact all its derived classes
 
-![image](https://user-images.githubusercontent.com/19663316/140602351-22263deb-eb41-41b4-8093-68cd47b1ecb5.png)
+![image](https://user-images.githubusercontent.com/19663316/140602572-1550481a-52da-4d56-9d71-691be7ae61d9.png)
 
 ```python
 class LinkedList:
@@ -121,6 +121,9 @@ It breaks the code because `self.insert(value)` calls the `insert` of Dervied cl
 
 To avoid this it is better if we use composition
 
+![image](https://user-images.githubusercontent.com/19663316/140602589-3c853369-b566-4a04-aeef-890c9054a5cc.png)
+
+
 ```python
 from linked import LinkedList
 from itertools import tee
@@ -170,3 +173,27 @@ print(f'length  = {len(lst)}')
 print(f'counter = {lst.counter}')
 ```
 
+Advantages of Composition
+* Implementations are configurable at runtime
+* Supports good encapsulation and adaptable structures
+* Interface changes have limited ripple effect
+* Composition allows a composite class to hace relationships with many component classes
+
+Disadvantages of Composition
+* Frequently requires more code than inheritance
+* Often more difficult to read than inheritance
+
+
+When to use inheritance
+* When the base and derived classes are in the same module/package and under the control of the same programmers
+* When extending classes specifically designed and documented for extension
+
+
+Things to Note
+* Inheritance is not wrong
+* Only use inheritance when a new class really does define a subtype of an existing class
+* Inheritance and composition are not competitors
+* Design and document for inheritance `JSONEncoder`. Example: https://docs.python.org/3/library/json.html#json.JSONEncoder
+* When using inheritance never forget the Liskov Substituion Principle(LSP) - functions that use references to base class objects must be able to use objects of derived classes without knowing it.
+
+![image](https://user-images.githubusercontent.com/19663316/140602782-0e007bfc-0924-432d-ade9-9ac010e38209.png)
