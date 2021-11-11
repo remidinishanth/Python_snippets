@@ -226,3 +226,7 @@ When comparing `strings`, `int` literals it is adviced to use `==`:
 * `is` checks for identity - if the two variables point to the exact same object.
 * `==` checks for equality - if the two variables point at values are equal. That is, if they will act the same way in the same situations.
 source: https://adamj.eu/tech/2020/01/21/why-does-python-3-8-syntaxwarning-for-is-literal/
+
+![image](https://user-images.githubusercontent.com/19663316/141359782-23073554-c8f2-4653-91da-1a295898072a.png)
+
+source: http://www.openbookproject.net/thinkcs/python/english2e/ch09.html#index-2
