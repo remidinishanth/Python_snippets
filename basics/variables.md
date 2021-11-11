@@ -233,5 +233,9 @@ source: http://www.openbookproject.net/thinkcs/python/english2e/ch09.html#index-
 
 ![image](https://user-images.githubusercontent.com/19663316/141359942-59842d9c-6229-4a3d-8330-485a60a88610.png)
 
-Pure functions and modifiers:
+Pure functions and Modifiers:
+* pure function: A function that does not modify any of the objects it receives as arguments. Most pure functions are fruitful.
+* modifier: A function that changes one or more of the objects it receives as arguments. Most modifiers are fruitless.
+* functional programming style: A style of program design in which the majority of functions are pure.
+
 ![image](https://user-images.githubusercontent.com/19663316/141360546-1aebda3a-4610-4028-bd8c-e17dc0d7466d.png)
