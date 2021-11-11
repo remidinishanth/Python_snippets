@@ -221,3 +221,8 @@ board1 = [[0]*8 for _ in range(8)]
 source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015, https://nedbatchelder.com/text/names.html
 
 TODO: https://mathspp.com/blog/pydonts/inner-workings-of-sequence-slicing
+
+When comparing `strings`, `int` literals it is adviced to use `==`: 
+* `is` checks for identity - if the two variables point to the exact same object.
+* `==` checks for equality - if the two variables point at values are equal. That is, if they will act the same way in the same situations.
+source: https://adamj.eu/tech/2020/01/21/why-does-python-3-8-syntaxwarning-for-is-literal/
