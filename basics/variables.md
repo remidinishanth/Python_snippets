@@ -230,3 +230,5 @@ source: https://adamj.eu/tech/2020/01/21/why-does-python-3-8-syntaxwarning-for-i
 ![image](https://user-images.githubusercontent.com/19663316/141359782-23073554-c8f2-4653-91da-1a295898072a.png)
 
 source: http://www.openbookproject.net/thinkcs/python/english2e/ch09.html#index-2
+
+![image](https://user-images.githubusercontent.com/19663316/141359942-59842d9c-6229-4a3d-8330-485a60a88610.png)
