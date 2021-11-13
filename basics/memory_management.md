@@ -59,6 +59,20 @@ There are a few ways to increase the reference count for an object, such as
 
 ![image](https://user-images.githubusercontent.com/19663316/141607058-98419b2f-cf0d-4d08-a5f7-56bd73448855.png)
 
+```c
+/* Nothing is actually declared to be a PyObject, but every pointer to
+ * a Python object can be cast to a PyObject*.  This is inheritance built
+ * by hand.  Similarly every pointer to a variable-size Python object can,
+ * in addition, be cast to PyVarObject*.
+ */
+typedef struct _object {
+    _PyObject_HEAD_EXTRA
+    Py_ssize_t ob_refcnt;
+    PyTypeObject *ob_type;
+} PyObject;
+
+```
+
 ## Garbage collection
 
 ![image](https://user-images.githubusercontent.com/19663316/141607072-9c8b9a61-fd1b-4dd9-9b6b-2e823e2c1038.png)
