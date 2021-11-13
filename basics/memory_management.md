@@ -170,6 +170,7 @@ As you can see, Python creates a number of objects by default before you even st
 Follow up: Don't use `is` unless you know what you are doing
 ![image](https://user-images.githubusercontent.com/19663316/141610395-d640fc88-857f-4874-be75-a84d635a67cf.png)
 
+![image](https://user-images.githubusercontent.com/19663316/141610447-5f11b6c0-c890-4a37-a7a7-447386d8e4cb.png)
 
 You can trigger a manual garbage collection process by using the gc.collect() method:
 
@@ -196,7 +197,6 @@ You can alter the thresholds for triggering garbage collection by using the set_
 ```
 
 ![image](https://user-images.githubusercontent.com/19663316/141609208-98d65eea-2f11-4d0d-bbc4-75332b42be51.png)
-
 
 **General rule: Don’t change garbage collector behavior**
 
