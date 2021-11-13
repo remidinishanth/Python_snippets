@@ -247,6 +247,9 @@ For example, integer objects are managed differently within the heap than string
 
 Below that, there are various generic supporting allocators at level +2 (and +1.5 and maybe +2.5)—at least an object allocator, an arena allocator, and a small-block allocator, etc. — but all but the first are private implementation details (meaning private even to the C-API; obviously all of it is private to Python code).
 
+![image](https://user-images.githubusercontent.com/19663316/141610082-a939213f-59c0-4ca8-92c4-1c6df0c00455.png)
+
+
 ### Small object allocation
 
 To reduce overhead for small objects (less than 512 bytes) Python sub-allocates big blocks of memory. Larger objects are routed to standard C allocator. Small object allocator uses three levels of abstraction — arena, pool, and block.
@@ -254,11 +257,16 @@ To reduce overhead for small objects (less than 512 bytes) Python sub-allocates 
 Let's start with the smallest structure — block.
 
 #### Block
+
+![image](https://user-images.githubusercontent.com/19663316/141610119-81af1e4b-230f-401b-b835-a6f356d44363.png)
+
 Block is a chunk of memory of a certain size. Each block can keep only one Python object of a fixed size. The size of the block can vary from 8 to 512 bytes and must be a multiple of eight (i.e., use 8-byte alignment). For convenience, such blocks are grouped in 64 size classes.
 
 ![image](https://user-images.githubusercontent.com/19663316/141608436-4e6dbce0-9eb3-4371-b79d-91119cc4b9d0.png)
 
 #### Pool
+
+![image](https://user-images.githubusercontent.com/19663316/141610130-368dca78-d3a6-4b2a-8d34-8ebb55aa978f.png)
 
 A collection of blocks of the same size is called a pool. Normally, the size of the pool is equal to the size of a memory page, i.e., 4Kb. Limiting pool to the fixed size of blocks helps with fragmentation. If an object gets destroyed, the memory manager can fill this space with a new object of the same size.
 
@@ -320,6 +328,8 @@ In order to efficiently manage pools Python uses an additional array called used
 Note that pools and blocks are not allocating memory directly, instead, they are using already allocated space from arenas.
 
 ### Arena
+
+![image](https://user-images.githubusercontent.com/19663316/141610149-e96d97a2-fa1f-42b7-9971-096fcd9fcfbb.png)
 
 The arena is a chunk of 256kB memory allocated on the heap, which provides memory for 64 pools.
 
