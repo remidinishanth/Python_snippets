@@ -55,6 +55,12 @@ There are a few ways to increase the reference count for an object, such as
 
 ![image](https://user-images.githubusercontent.com/19663316/141607018-31f0b176-0762-4044-88e0-4308f9df9a4f.png)
 
+![image](https://user-images.githubusercontent.com/19663316/141610799-d9c84ead-2447-44a8-a2d4-bbda0f8f11df.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141610673-26270059-5da5-4af7-944d-11ded0a67f6a.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141610701-7d1804c2-26ad-4dc5-8d4b-4f97e117face.png)
+
 ![image](https://user-images.githubusercontent.com/19663316/141607049-0d983eaa-873c-46a3-9352-b0d3ca1b80a1.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141607058-98419b2f-cf0d-4d08-a5f7-56bd73448855.png)
