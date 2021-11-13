@@ -167,6 +167,9 @@ As you can see, Python creates a number of objects by default before you even st
 
 ![image](https://user-images.githubusercontent.com/19663316/141609190-80ce66c5-c165-46d9-81de-9879b1c70d48.png)
 
+Follow up: Don't use `is` unless you know what you are doing
+![image](https://user-images.githubusercontent.com/19663316/141610395-d640fc88-857f-4874-be75-a84d635a67cf.png)
+
 
 You can trigger a manual garbage collection process by using the gc.collect() method:
 
