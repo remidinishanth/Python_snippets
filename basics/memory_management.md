@@ -61,7 +61,7 @@ There are a few ways to increase the reference count for an object, such as
 
 ### type PyObject
 
-All object types are extensions of this type. This is a type which contains the information Python needs to treat a pointer to an object as an object. In a normal “release” build, it contains only the object’s reference count and a pointer to the corresponding type object. Nothing is actually declared to be a PyObject, but every pointer to a Python object can be cast to a PyObject*. Access to the members must be done by using the macros Py_REFCNT and Py_TYPE.
+All object types are extensions of this type. This is a type which contains the information Python needs to treat a pointer to an object as an object. In a normal “release” build, it contains only the object’s reference count `ob_refcnt` and a pointer to the corresponding type object `*ob_type` . Nothing is actually declared to be a PyObject, but every pointer to a Python object can be cast to a `PyObject*`. Access to the members must be done by using the macros `Py_REFCNT` and `Py_TYPE`.
 
 ```c
 /* Nothing is actually declared to be a PyObject, but every pointer to
