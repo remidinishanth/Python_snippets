@@ -213,6 +213,14 @@ You can alter the thresholds for triggering garbage collection by using the set_
 
 **General rule: Don’t change garbage collector behavior**
 
+Instagram disabled GC and then re-enabled because lot of memory was being used, Python does Copy on Read ?
+![image](https://user-images.githubusercontent.com/19663316/141610942-5546d32d-be38-467b-83e8-89cb2524ca6d.png)
+
+### Memory Tools
+
+![image](https://user-images.githubusercontent.com/19663316/141610992-32d57b41-5efa-46f8-b7f6-554a8654bbb0.png)
+
+
 ## `__slots__`
 
 ![image](https://user-images.githubusercontent.com/19663316/141607340-6d398b61-d732-4b50-91e3-4c866ef05232.png)
