@@ -73,6 +73,23 @@ typedef struct _object {
 
 ```
 
+`_PyObject_HEAD_EXTRA` is for debugging
+
+```c
+#ifdef Py_TRACE_REFS
+/* Define pointers to support a doubly-linked list of all live heap objects. */
+#define _PyObject_HEAD_EXTRA            \
+    struct _object *_ob_next;           \
+    struct _object *_ob_prev;
+
+#define _PyObject_EXTRA_INIT 0, 0,
+
+#else
+#  define _PyObject_HEAD_EXTRA
+#  define _PyObject_EXTRA_INIT
+#endif
+```
+
 ## Garbage collection
 
 ![image](https://user-images.githubusercontent.com/19663316/141607072-9c8b9a61-fd1b-4dd9-9b6b-2e823e2c1038.png)
