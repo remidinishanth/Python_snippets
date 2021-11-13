@@ -1,5 +1,13 @@
 source: https://www.slideshare.net/nnja/memory-management-in-python-the-basics
 
+The following information is for CPython implementation of Python, you can check the implementation of python as follows
+
+```python
+>>> import platform
+>>> print(platform.python_imlplementation())
+CPython
+```
+
 ![image](https://user-images.githubusercontent.com/19663316/141606934-9d2db520-ec4a-4825-8309-00e66a90b820.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141606941-dcc854b4-3bdc-417a-a301-cf0e2ba8a5bc.png)
