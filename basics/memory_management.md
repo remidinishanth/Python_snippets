@@ -98,6 +98,59 @@ There are a few ways to increase the reference count for an object, such as
 
 ![image](https://user-images.githubusercontent.com/19663316/141607305-14728b8c-ec1a-4138-a751-c8ce095ff505.png)
 
+There are two key concepts to understand with the generational garbage collector.
+
+* The first concept is that of a generation.
+* The second key concept is the threshold. 
+
+The garbage collector is keeping track of all objects in memory. A new object starts its life in the first generation of the garbage collector. If Python executes a garbage collection process on a generation and an object survives, it moves up into a second, older generation. The Python garbage collector has three generations in total, and an object moves into an older generation whenever it survives a garbage collection process on its current generation.
+
+For each generation, the garbage collector module has a threshold number of objects. If the number of objects exceeds that threshold, the garbage collector will trigger a collection process. For any objects that survive that process, they’re moved into an older generation.
+
+Unlike the reference counting mechanism, you may change the behavior of the generational garbage collector in your Python program. This includes changing the thresholds for triggering a garbage collection process in your code. Additionally, you can manually trigger a garbage collection process, or disable the garbage collection process altogether.
+
+```python
+>>> import gc
+>>> gc.get_threshold()
+(700, 10, 10)
+```
+
+By default, Python has a threshold of 700 for the youngest generation and 10 for each of the two older generations.
+
+You can check the number of objects in each of your generations with the get_count() method:
+
+```python
+>>> import gc
+>>> gc.get_count()
+(596, 2, 1)
+```
+
+As you can see, Python creates a number of objects by default before you even start executing your program. You can trigger a manual garbage collection process by using the gc.collect() method:
+
+```python
+>>> gc.get_count()
+(595, 2, 1)
+>>> gc.collect()
+577
+>>> gc.get_count()
+(18, 0, 0)
+```
+
+Running a garbage collection process cleans up a huge amount of objects—there are 577 objects in the first generation and three more in the older generations.
+
+You can alter the thresholds for triggering garbage collection by using the set_threshold() method in the gc module:
+
+```python
+>>> import gc
+>>> gc.get_threshold()
+(700, 10, 10)
+>>> gc.set_threshold(1000, 15, 15)
+>>> gc.get_threshold()
+(1000, 15, 15)
+```
+
+**General rule: Don’t change garbage collector behavior**
+
 ## `__slots__`
 
 ![image](https://user-images.githubusercontent.com/19663316/141607340-6d398b61-d732-4b50-91e3-4c866ef05232.png)
@@ -123,3 +176,14 @@ There are a few ways to increase the reference count for an object, such as
 ![image](https://user-images.githubusercontent.com/19663316/141607466-34367ad0-fa69-4d22-a3bb-05a4061bafd2.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141607479-d53d6c0a-8a45-47d4-b8b5-5ccfbadf9781.png)
+
+
+## Memory management in Python
+
+Everything in Python is an object. Some objects can hold other objects, such as lists, tuples, dicts, classes, etc. Because of dynamic Python's nature, such an approach requires a lot of small memory allocations. To speed-up memory operations and reduce fragmentation Python uses a special manager on top of the general-purpose allocator, called PyMalloc.
+
+We can depict the whole system as a set of hierarchical layers:
+
+![image](https://user-images.githubusercontent.com/19663316/141608079-6a672939-d73b-40d2-acc6-0fea0a8556a4.png)
+
+source: https://github.com/python/cpython/blob/ad051cbce1360ad3055a048506c09bc2a5442474/Objects/obmalloc.c#L534 and https://rushter.com/blog/python-memory-managment/
