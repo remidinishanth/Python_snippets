@@ -1,3 +1,4 @@
+Nina Zakharenko - Memory Management in Python - The Basics - PyCon 2016
 source: https://www.slideshare.net/nnja/memory-management-in-python-the-basics
 
 The following information is for CPython implementation of Python, you can check the implementation of python as follows
