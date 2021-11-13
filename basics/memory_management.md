@@ -59,6 +59,8 @@ There are a few ways to increase the reference count for an object, such as
 
 ![image](https://user-images.githubusercontent.com/19663316/141607058-98419b2f-cf0d-4d08-a5f7-56bd73448855.png)
 
+![image](https://user-images.githubusercontent.com/19663316/141609216-ae97bc15-598c-4c36-8b10-4196f1e02fca.png)
+
 ### type PyObject
 
 All object types are extensions of this type. This is a type which contains the information Python needs to treat a pointer to an object as an object. In a normal “release” build, it contains only the object’s reference count `ob_refcnt` and a pointer to the corresponding type object `*ob_type` . Nothing is actually declared to be a PyObject, but every pointer to a Python object can be cast to a `PyObject*`. Access to the members must be done by using the macros `Py_REFCNT` and `Py_TYPE`.
@@ -161,7 +163,12 @@ You can check the number of objects in each of your generations with the get_cou
 (596, 2, 1)
 ```
 
-As you can see, Python creates a number of objects by default before you even start executing your program. You can trigger a manual garbage collection process by using the gc.collect() method:
+As you can see, Python creates a number of objects by default before you even start executing your program. 
+
+![image](https://user-images.githubusercontent.com/19663316/141609190-80ce66c5-c165-46d9-81de-9879b1c70d48.png)
+
+
+You can trigger a manual garbage collection process by using the gc.collect() method:
 
 ```python
 >>> gc.get_count()
@@ -184,6 +191,9 @@ You can alter the thresholds for triggering garbage collection by using the set_
 >>> gc.get_threshold()
 (1000, 15, 15)
 ```
+
+![image](https://user-images.githubusercontent.com/19663316/141609208-98d65eea-2f11-4d0d-bbc4-75332b42be51.png)
+
 
 **General rule: Don’t change garbage collector behavior**
 
