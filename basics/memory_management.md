@@ -234,6 +234,8 @@ We can depict the whole system as a set of hierarchical layers:
 
 source: https://github.com/python/cpython/blob/ad051cbce1360ad3055a048506c09bc2a5442474/Objects/obmalloc.c#L534 and https://rushter.com/blog/python-memory-managment/
 
+At the lowest level, a raw memory allocator ensures that there is enough room in the private heap for storing all Python-related data by interacting with the memory manager of the operating system.
+
 ### Small object allocation
 
 To reduce overhead for small objects (less than 512 bytes) Python sub-allocates big blocks of memory. Larger objects are routed to standard C allocator. Small object allocator uses three levels of abstraction — arena, pool, and block.
