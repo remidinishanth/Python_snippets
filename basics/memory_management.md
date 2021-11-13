@@ -187,3 +187,35 @@ We can depict the whole system as a set of hierarchical layers:
 ![image](https://user-images.githubusercontent.com/19663316/141608079-6a672939-d73b-40d2-acc6-0fea0a8556a4.png)
 
 source: https://github.com/python/cpython/blob/ad051cbce1360ad3055a048506c09bc2a5442474/Objects/obmalloc.c#L534 and https://rushter.com/blog/python-memory-managment/
+
+### Small object allocation
+
+To reduce overhead for small objects (less than 512 bytes) Python sub-allocates big blocks of memory. Larger objects are routed to standard C allocator. Small object allocator uses three levels of abstraction — arena, pool, and block.
+
+Let's start with the smallest structure — block.
+
+#### Block
+Block is a chunk of memory of a certain size. Each block can keep only one Python object of a fixed size. The size of the block can vary from 8 to 512 bytes and must be a multiple of eight (i.e., use 8-byte alignment). For convenience, such blocks are grouped in 64 size classes.
+
+![image](https://user-images.githubusercontent.com/19663316/141608436-4e6dbce0-9eb3-4371-b79d-91119cc4b9d0.png)
+
+#### Pool
+
+A collection of blocks of the same size is called a pool. Normally, the size of the pool is equal to the size of a memory page, i.e., 4Kb. Limiting pool to the fixed size of blocks helps with fragmentation. If an object gets destroyed, the memory manager can fill this space with a new object of the same size.
+
+Each pool has a special header structure, which is defined as follows:
+
+```c
+/* Pool for small blocks. */
+struct pool_header {
+    union { block *_padding;
+            uint count; } ref;          /* number of allocated blocks    */
+    block *freeblock;                   /* pool's free list head         */
+    struct pool_header *nextpool;       /* next pool of this size class  */
+    struct pool_header *prevpool;       /* previous pool       ""        */
+    uint arenaindex;                    /* index into arenas of base adr */
+    uint szidx;                         /* block size class index        */
+    uint nextoffset;                    /* bytes to virgin block         */
+    uint maxnextoffset;                 /* largest valid nextoffset      */
+};
+```
