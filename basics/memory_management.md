@@ -201,6 +201,8 @@ You can alter the thresholds for triggering garbage collection by using the set_
 
 ![image](https://user-images.githubusercontent.com/19663316/141609208-98d65eea-2f11-4d0d-bbc4-75332b42be51.png)
 
+![image](https://user-images.githubusercontent.com/19663316/141610649-d9e894a2-c552-4cd1-8452-1ffb4b4ad8af.png)
+
 **General rule: Don’t change garbage collector behavior**
 
 ## `__slots__`
