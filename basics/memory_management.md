@@ -230,7 +230,7 @@ Everything in Python is an object. Some objects can hold other objects, such as 
 
 We can depict the whole system as a set of hierarchical layers:
 
-![image](https://user-images.githubusercontent.com/19663316/141608079-6a672939-d73b-40d2-acc6-0fea0a8556a4.png)
+![image](https://user-images.githubusercontent.com/19663316/141609750-54097035-f9f6-4499-a900-2ac4a683fa47.png)
 
 source: https://github.com/python/cpython/blob/ad051cbce1360ad3055a048506c09bc2a5442474/Objects/obmalloc.c#L534 and https://rushter.com/blog/python-memory-managment/
 
