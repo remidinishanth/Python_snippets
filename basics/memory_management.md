@@ -14,14 +14,25 @@ source: https://www.slideshare.net/nnja/memory-management-in-python-the-basics
 
 ![image](https://user-images.githubusercontent.com/19663316/141606985-fd551d4a-fa34-4abc-9a89-a84137990ba5.png)
 
-![image](https://user-images.githubusercontent.com/19663316/141606994-d0a96cbd-467a-4b78-af37-a41b3963ef51.png)
-
 ```python
 >>> import sys
 >>> a = 'my-string'
 >>> sys.getrefcount(a)
 2
 ```
+
+Notice that there are two references to our variable a. One is from creating the variable. The second is when we pass the variable a to the sys.getrefcount() function.
+
+```python
+>>> import sys
+>>> a = 'my-string'
+>>> b = [a] # Make a list with a as an element.
+>>> c = { 'key': a } # Create a dictionary with a as one of the values.
+>>> sys.getrefcount(a)
+4
+```
+
+![image](https://user-images.githubusercontent.com/19663316/141606994-d0a96cbd-467a-4b78-af37-a41b3963ef51.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141607008-292ec6c7-b57c-46e8-b955-7c466fd73535.png)
 
