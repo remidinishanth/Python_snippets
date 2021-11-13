@@ -16,6 +16,13 @@ source: https://www.slideshare.net/nnja/memory-management-in-python-the-basics
 
 ![image](https://user-images.githubusercontent.com/19663316/141606994-d0a96cbd-467a-4b78-af37-a41b3963ef51.png)
 
+```python
+>>> import sys
+>>> a = 'my-string'
+>>> sys.getrefcount(a)
+2
+```
+
 ![image](https://user-images.githubusercontent.com/19663316/141607008-292ec6c7-b57c-46e8-b955-7c466fd73535.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141607025-c68758b0-b1cb-4c6e-8867-f0526bf06bb5.png)
@@ -77,3 +84,17 @@ source: https://www.slideshare.net/nnja/memory-management-in-python-the-basics
 ![image](https://user-images.githubusercontent.com/19663316/141607366-a53cd87e-b5af-40fe-8fa0-f408ec53c873.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141607331-c04d64e3-3329-4452-8ddf-fe69415b2ebd.png)
+
+## GIL
+
+![image](https://user-images.githubusercontent.com/19663316/141607431-8a99417c-88a4-4b8a-a3b3-4858c1281f17.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141607456-a56b3c3e-1cf2-4ea7-b74c-89c63bab7c2b.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141607428-854f85e2-a957-4ac0-a86f-9724fcdfdb71.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141607460-b12ef94a-8cc0-451b-abec-e7e29c27c507.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141607466-34367ad0-fa69-4d22-a3bb-05a4061bafd2.png)
+
+![image](https://user-images.githubusercontent.com/19663316/141607479-d53d6c0a-8a45-47d4-b8b5-5ccfbadf9781.png)
