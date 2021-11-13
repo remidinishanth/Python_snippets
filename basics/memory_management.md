@@ -238,6 +238,15 @@ Memory management in Python involves a private heap containing all Python object
 
 At the lowest level, a raw memory allocator ensures that there is enough room in the private heap for storing all Python-related data by interacting with the memory manager of the operating system.
 
+
+The object-specific allocators at level +3 are for specific uses cases that are worth optimizing. As the docs say:
+
+```
+For example, integer objects are managed differently within the heap than strings, tuples or dictionaries because integers imply different storage requirements and speed/space tradeoffs.
+```
+
+Below that, there are various generic supporting allocators at level +2 (and +1.5 and maybe +2.5)—at least an object allocator, an arena allocator, and a small-block allocator, etc. — but all but the first are private implementation details (meaning private even to the C-API; obviously all of it is private to Python code).
+
 ### Small object allocation
 
 To reduce overhead for small objects (less than 512 bytes) Python sub-allocates big blocks of memory. Larger objects are routed to standard C allocator. Small object allocator uses three levels of abstraction — arena, pool, and block.
