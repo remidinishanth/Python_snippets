@@ -40,6 +40,12 @@ Notice that there are two references to our variable a. One is from creating the
 4
 ```
 
+There are a few ways to increase the reference count for an object, such as 
+
+* Assigning an object to a variable.
+* Adding an object to a data structure, such as appending to a list or adding as a property on a class instance.
+* Passing the object as an argument to a function.
+
 ![image](https://user-images.githubusercontent.com/19663316/141606994-d0a96cbd-467a-4b78-af37-a41b3963ef51.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141607008-292ec6c7-b57c-46e8-b955-7c466fd73535.png)
