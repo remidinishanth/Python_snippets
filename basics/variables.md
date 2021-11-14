@@ -257,6 +257,21 @@ for row in arr:
 #[0, 0, 0, 0, 0]
 ```
 
+```python
+N = 5
+arr = [0]*N
+```
+
+![image](https://user-images.githubusercontent.com/19663316/141664569-87316b85-f5d2-4f32-8837-7ea9a979ff34.png)
+
+Similarly, if we create a 2D array
+```python
+arr = [[0]*cols]*rows
+```
+
+![image](https://user-images.githubusercontent.com/19663316/141664587-9913b553-d181-4adc-a0b6-a86178cff5c8.png)
+
+
 TODO: https://mathspp.com/blog/pydonts/inner-workings-of-sequence-slicing
 
 When comparing `strings`, `int` literals it is adviced to use `==`: 
