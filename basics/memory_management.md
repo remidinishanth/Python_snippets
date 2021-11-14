@@ -417,9 +417,9 @@ Stubs of heads of cicular linked lists.
 
 That means that a pool can have blocks in 3 states. These states can be defined as follows:
 
-* untouched: a portion of memory that has not been allocated
-* free: a portion of memory that was allocated but later made “free” by CPython and that no longer contains relevant data
-* allocated: a portion of memory that actually contains relevant data
+* `untouched`: a portion of memory that has not been allocated
+* `free`: a portion of memory that was allocated but later made “free” by CPython and that no longer contains relevant data
+* `allocated`: a portion of memory that actually contains relevant data
 
 ![image](https://user-images.githubusercontent.com/19663316/141694228-cfe12466-0140-4593-ba76-ee3de315b5aa.png)
 
