@@ -271,6 +271,12 @@ arr = [[0]*cols]*rows
 
 ![image](https://user-images.githubusercontent.com/19663316/141664587-9913b553-d181-4adc-a0b6-a86178cff5c8.png)
 
+```python
+arr[0][0] = 1
+```
+
+![image](https://user-images.githubusercontent.com/19663316/141664606-ea9f8be1-28a2-49bc-8230-1698cf4ab4fc.png)
+
 
 TODO: https://mathspp.com/blog/pydonts/inner-workings-of-sequence-slicing
 
