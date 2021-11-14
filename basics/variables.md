@@ -220,6 +220,43 @@ board1 = [[0]*8 for _ in range(8)]
 
 source: Ned Batchelder - Facts and Myths about Python names and values - PyCon 2015, https://nedbatchelder.com/text/names.html
 
+```python
+rows, cols = (5, 5)
+ 
+# method 2a
+arr = [[0]*cols]*rows
+ 
+# lets change the first element of the
+# first row to 1 and print the array
+arr[0][0] = 1
+ 
+for row in arr:
+    print(row)
+# outputs the following
+#[1, 0, 0, 0, 0]
+#[1, 0, 0, 0, 0]
+#[1, 0, 0, 0, 0]
+#[1, 0, 0, 0, 0]
+#[1, 0, 0, 0, 0]
+ 
+# method 2b
+arr = [[0 for i in range(cols)] for j in range(rows)]
+ 
+# again in this new array lets change
+# the first element of the first row
+# to 1 and print the array
+arr[0][0] = 1
+for row in arr:
+    print(row)
+ 
+# outputs the following as expected
+#[1, 0, 0, 0, 0]
+#[0, 0, 0, 0, 0]
+#[0, 0, 0, 0, 0]
+#[0, 0, 0, 0, 0]
+#[0, 0, 0, 0, 0]
+```
+
 TODO: https://mathspp.com/blog/pydonts/inner-workings-of-sequence-slicing
 
 When comparing `strings`, `int` literals it is adviced to use `==`: 
