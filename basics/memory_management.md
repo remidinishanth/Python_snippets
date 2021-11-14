@@ -394,6 +394,8 @@ There is nothing complicated in the implementation of the arena. Think of it as 
 
 ### Stepping through CPython
 
+Top(Arena) to down(Block) view
+
 ![image](https://user-images.githubusercontent.com/19663316/141694213-973ce94c-70b9-4c68-bbf1-66db2da0ab4d.png)
 
 ![image](https://user-images.githubusercontent.com/19663316/141684189-871d2584-9973-4737-a7db-ba0ffcdc1d23.png)
