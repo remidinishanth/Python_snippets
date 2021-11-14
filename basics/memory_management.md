@@ -105,6 +105,11 @@ typedef struct _object {
 #endif
 ```
 
+#### PyTypeObject
+
+![image](https://user-images.githubusercontent.com/19663316/141683687-e5c3ac4a-b0e1-44fc-aaa5-8d8f97de9ebf.png)
+
+
 ## Garbage collection
 
 ![image](https://user-images.githubusercontent.com/19663316/141607072-9c8b9a61-fd1b-4dd9-9b6b-2e823e2c1038.png)
