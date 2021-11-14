@@ -88,6 +88,10 @@ typedef struct _object {
 
 ```
 
+The reference count is used for garbage collection. Then you have a pointer to the actual object type. That object type is just another struct that describes a Python object (such as a dict or int).
+
+Each object has its own object-specific memory allocator that knows how to get the memory to store that object. Each object also has an object-specific memory deallocator that “frees” the memory once it’s no longer needed.
+
 `_PyObject_HEAD_EXTRA` is for debugging
 
 ```c
