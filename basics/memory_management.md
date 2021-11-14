@@ -109,6 +109,9 @@ typedef struct _object {
 
 ![image](https://user-images.githubusercontent.com/19663316/141683687-e5c3ac4a-b0e1-44fc-aaa5-8d8f97de9ebf.png)
 
+Some of them are function pointers that implement things like `tp_dealloc`, `tp_repr`, `to_hash`, `getattr`, `setattr`.
+
+https://docs.python.org/3/c-api/typeobj.html#quick-reference
 
 ## Garbage collection
 
