@@ -283,7 +283,6 @@ Below that, there are various generic supporting allocators at level +2 (and +1.
 
 ![image](https://user-images.githubusercontent.com/19663316/141610082-a939213f-59c0-4ca8-92c4-1c6df0c00455.png)
 
-
 ### Small object allocation
 
 To reduce overhead for small objects (less than 512 bytes) Python sub-allocates big blocks of memory. Larger objects are routed to standard C allocator. Small object allocator uses three levels of abstraction — arena, pool, and block.
@@ -388,6 +387,26 @@ All arenas are linked using doubly linked list (the `nextarena` and `prevarena` 
 The `freepools` field points to the linked list of available pools.
 
 There is nothing complicated in the implementation of the arena. Think of it as a list of containers, which automatically allocates new memory for pools when needed.
+
+### Stepping through CPython
+
+![image](https://user-images.githubusercontent.com/19663316/141684189-871d2584-9973-4737-a7db-ba0ffcdc1d23.png)
+
+Inside each arena 
+![image](https://user-images.githubusercontent.com/19663316/141684206-b6dd0ca6-4035-4ee8-9284-9dbb353ba1b3.png)
+
+Inside each 4k block
+![image](https://user-images.githubusercontent.com/19663316/141684224-23ba3089-596f-4ace-8945-596ddae3b92b.png)
+
+freelist inside the `struct pool_header`
+![image](https://user-images.githubusercontent.com/19663316/141684251-5c52f723-e236-41c8-b847-c19629e465f1.png)
+
+`struct pool_header` lives in a circular doubly linked list.
+![image](https://user-images.githubusercontent.com/19663316/141684351-b7d75924-6bbf-45ed-835e-d8ab83072817.png)
+
+Stubs of heads of cicular linked lists.
+![image](https://user-images.githubusercontent.com/19663316/141684399-aa960f30-3fda-41c5-a14c-c6424419e0dc.png)
+
 
 ### Memory deallocation
 Python's small object manager rarely returns memory back to the Operating System.
