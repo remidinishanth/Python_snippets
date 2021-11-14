@@ -394,6 +394,8 @@ There is nothing complicated in the implementation of the arena. Think of it as 
 
 ### Stepping through CPython
 
+![image](https://user-images.githubusercontent.com/19663316/141694213-973ce94c-70b9-4c68-bbf1-66db2da0ab4d.png)
+
 ![image](https://user-images.githubusercontent.com/19663316/141684189-871d2584-9973-4737-a7db-ba0ffcdc1d23.png)
 
 Inside each arena 
@@ -411,6 +413,30 @@ freelist inside the `struct pool_header`
 Stubs of heads of cicular linked lists.
 ![image](https://user-images.githubusercontent.com/19663316/141684399-aa960f30-3fda-41c5-a14c-c6424419e0dc.png)
 
+![image](https://user-images.githubusercontent.com/19663316/141694209-fe5ff5fc-6a07-47a2-a90e-696a983a8c2b.png)
+
+That means that a pool can have blocks in 3 states. These states can be defined as follows:
+
+* untouched: a portion of memory that has not been allocated
+* free: a portion of memory that was allocated but later made “free” by CPython and that no longer contains relevant data
+* allocated: a portion of memory that actually contains relevant data
+
+![image](https://user-images.githubusercontent.com/19663316/141694228-cfe12466-0140-4593-ba76-ee3de315b5aa.png)
+
+
+Arenas contain pools. Those pools can be used, full, or empty. Arenas themselves don’t have as explicit states as pools do though.
+
+Arenas are instead organized into a doubly linked list called usable_arenas. The list is sorted by the number of free pools available. The fewer free pools, the closer the arena is to the front of the list.
+
+![image](https://user-images.githubusercontent.com/19663316/141694270-4a662705-2331-414c-b015-da45c7e96ad1.png)
+
+This means that the arena that is the most full of data will be selected to place new data into. But why not the opposite? Why not place data where there’s the most available space?
+
+This brings us to the idea of truly freeing memory. You’ll notice that I’ve been saying “free” in quotes quite a bit. The reason is that when a block is deemed “free”, that memory is not actually freed back to the operating system. The Python process keeps it allocated and will use it later for new data. Truly freeing memory returns it to the operating system to use.
+
+Arenas are the only things that can truly be freed. So, it stands to reason that those arenas that are closer to being empty should be allowed to become empty. That way, that chunk of memory can be truly freed, reducing the overall memory footprint of your Python program
+
+source: https://realpython.com/python-memory-management/
 
 ### Memory deallocation
 Python's small object manager rarely returns memory back to the Operating System.
