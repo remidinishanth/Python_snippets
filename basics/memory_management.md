@@ -113,6 +113,8 @@ Some of them are function pointers that implement things like `tp_dealloc`, `tp_
 
 https://docs.python.org/3/c-api/typeobj.html#quick-reference
 
+![image](https://user-images.githubusercontent.com/19663316/141684099-fb73a410-b2ba-4bd0-a893-dd21d95366f6.png)
+
 ## Garbage collection
 
 ![image](https://user-images.githubusercontent.com/19663316/141607072-9c8b9a61-fd1b-4dd9-9b6b-2e823e2c1038.png)
