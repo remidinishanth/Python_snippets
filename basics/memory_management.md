@@ -358,7 +358,7 @@ Each pool has three states:
 * full — all the pool's blocks are currently allocated
 * empty — all the pool's blocks are currently available for allocation
 
-In order to efficiently manage pools Python uses an additional array called usedpools. It stores pointers to the pools grouped by class. As we already know, all pools of the same block size are linked together. To iterate over them, we just need to know the start of the list. If there are no pools of such size, then a new pool will be created on the first memory request.
+In order to efficiently manage pools Python uses an additional array called `usedpools`. It stores pointers to the pools grouped by class. As we already know, all pools of the same block size are linked together. To iterate over them, we just need to know the start of the list. If there are no pools of such size, then a new pool will be created on the first memory request.
 
 ![image](https://user-images.githubusercontent.com/19663316/141608539-850445c0-e6e4-4a81-8685-602c5c2c58b1.png)
 
@@ -423,10 +423,9 @@ That means that a pool can have blocks in 3 states. These states can be defined 
 
 ![image](https://user-images.githubusercontent.com/19663316/141694228-cfe12466-0140-4593-ba76-ee3de315b5aa.png)
 
-
 Arenas contain pools. Those pools can be used, full, or empty. Arenas themselves don’t have as explicit states as pools do though.
 
-Arenas are instead organized into a doubly linked list called usable_arenas. The list is sorted by the number of free pools available. The fewer free pools, the closer the arena is to the front of the list.
+Arenas are instead organized into a doubly linked list called `usable_arenas`. The list is sorted by the number of free pools available. The fewer free pools, the closer the arena is to the front of the list.
 
 ![image](https://user-images.githubusercontent.com/19663316/141694270-4a662705-2331-414c-b015-da45c7e96ad1.png)
 
