@@ -48,6 +48,25 @@ Attribute access on an object is implemented via two special methods. The first 
 
 ![image](https://user-images.githubusercontent.com/19663316/139597874-e9e323e6-e9e5-4e7c-b0ca-6383ce751009.png)
 
+
+```python
+stuff = list()
+stuff.append('python')
+stuff.append('chuck')
+stuff.sort()
+print (stuff[0])
+print (stuff.__getitem__(0))
+print (list.__getitem__(stuff,0))
+```
+
+In this code, we call the `__getitem__` method in the `list` class and pass the list and the item we want retrieved from the list as parameters.
+
+* The sixth line calls the `__getitem__()` method in the `stuff` list with a parameter of `0` --> `stuff.__getitem__(0)`
+* The seventh line is an even more verbose way of retrieving the `0`-th item in the list --> `list.__getitem__(stuff,0)`
+
+The last three lines of the program are equivalent, but it is more convenient to simply use the square bracket syntax to look up an item at a particular position in a list.
+
+
 * `import a` syntactic sugar
 ```python
 a = __import__("a", globals(), locals())
