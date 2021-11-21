@@ -47,3 +47,5 @@ Out[216]: 'foo'
 In [217]: repr(Sic())
 Out[217]: '<__main__.Sic object at 0x7fad579e1c10>'
 ```
+
+As you see, if you override `__repr__`, that's ALSO used for `__str__`, but not vice versa.
