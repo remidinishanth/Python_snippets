@@ -83,3 +83,16 @@ SyntaxError: EOL while scanning string literal
 In [222]: eval(repr(s))==s
 Out[222]: True
 ```
+
+str(object='')
+
+```
+Return a string containing a nicely printable representation of an object. 
+
+For strings, this returns the string itself. 
+
+The difference with repr(object) is that str(object) does not always attempt to return a string 
+that is acceptable to eval(); its goal is to return a printable string. 
+
+If no argument is given, returns the empty string, ''.
+```
