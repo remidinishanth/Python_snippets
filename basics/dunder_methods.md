@@ -49,3 +49,37 @@ Out[217]: '<__main__.Sic object at 0x7fad579e1c10>'
 ```
 
 As you see, if you override `__repr__`, that's ALSO used for `__str__`, but not vice versa.
+
+
+
+`__repr__`: representation of python object usually eval will convert it back to that object
+
+`__str__`: is whatever you think is that object in text form
+
+```python
+In [218]: s="""w'o"w"""
+
+In [219]: repr(s)
+Out[219]: '\'w\\\'o"w\''
+
+In [220]: str(s)
+Out[220]: 'w\'o"w'
+
+In [221]: eval(str(s))==s
+Traceback (most recent call last):
+
+  File "/Users/nishanth.reddy/miniconda3/lib/python3.8/site-packages/IPython/core/interactiveshell.py", line 3437, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+
+  File "<ipython-input-221-2baed6d8daca>", line 1, in <module>
+    eval(str(s))==s
+
+  File "<string>", line 1
+    w'o"w
+        ^
+SyntaxError: EOL while scanning string literal
+
+
+In [222]: eval(repr(s))==s
+Out[222]: True
+```
