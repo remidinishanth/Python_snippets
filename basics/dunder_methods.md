@@ -25,3 +25,25 @@ get printed the same way: you have no way to tell if the original object is an i
 
 After that, you see that simply writing the integer `3` and the string `"3"` in the REPL returns an unambiguous representation of the object: you can tell integers and strings apart, because the REPL is using repr under the hood to show
 objects.
+
+```python
+In [212]: class Sic(object):
+     ...:     def __repr__(object): return 'foo'
+     ...:
+
+In [213]: str(Sic())
+Out[213]: 'foo'
+
+In [214]: repr(Sic())
+Out[214]: 'foo'
+
+In [215]: class Sic(object):
+     ...:     def __str__(object): return 'foo'
+     ...:
+
+In [216]: str(Sic())
+Out[216]: 'foo'
+
+In [217]: repr(Sic())
+Out[217]: '<__main__.Sic object at 0x7fad579e1c10>'
+```
