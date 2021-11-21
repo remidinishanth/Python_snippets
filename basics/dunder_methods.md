@@ -84,7 +84,7 @@ In [222]: eval(repr(s))==s
 Out[222]: True
 ```
 
-str(object='')
+`str(object='')`
 
 ```
 Return a string containing a nicely printable representation of an object. 
