@@ -106,3 +106,25 @@ repr(...)
     Return the canonical string representation of the object.
     For most object types, eval(repr(object)) == object.
 ```
+
+How is `__repr__` helpful?
+
+Let's look at how useful it can be, using the Python shell and datetime objects. First we need to import the datetime module:
+
+```python
+import datetime
+```
+
+If we call datetime.now in the shell, we'll see everything we need to recreate an equivalent datetime object. This is created by the datetime `__repr__`:
+
+```python
+>>> datetime.datetime.now()
+datetime.datetime(2015, 1, 24, 20, 5, 36, 491180)
+```
+
+If we print a datetime object, we see a nice human readable (in fact, ISO) format. This is implemented by datetime's `__str__`:
+
+```python
+>>> print(datetime.datetime.now())
+2015-01-24 20:05:44.977951
+```
