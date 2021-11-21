@@ -96,3 +96,13 @@ that is acceptable to eval(); its goal is to return a printable string.
 
 If no argument is given, returns the empty string, ''.
 ```
+
+Built-in help for `repr`
+
+```python
+repr(...)
+    repr(object) -> string
+
+    Return the canonical string representation of the object.
+    For most object types, eval(repr(object)) == object.
+```
