@@ -128,3 +128,5 @@ If we print a datetime object, we see a nice human readable (in fact, ISO) forma
 >>> print(datetime.datetime.now())
 2015-01-24 20:05:44.977951
 ```
+
+source: https://stackoverflow.com/questions/1436703/what-is-the-difference-between-str-and-repr
