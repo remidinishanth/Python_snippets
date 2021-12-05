@@ -144,3 +144,5 @@ async def nbcaser(c):
 if __name__ == '__main__':
     reactor('localhost', 9600)
 ```
+
+Credit: Yury Selivanov helped me convert this example from using yield and two-way generators to using coroutines and await.
