@@ -128,3 +128,31 @@ mydict.nested.val
 ```
 
 source: https://stackoverflow.com/questions/2352181/how-to-use-a-dot-to-access-members-of-dictionary, Check other answers too
+
+## 5
+
+Recursive dict
+
+```python
+In [26]: # Define recursive dictionary
+    ...: from collections import defaultdict
+    ...: tree = lambda: defaultdict(tree)
+
+In [27]: # Create instance
+    ...: mydict = tree()
+    ...:
+    ...: mydict['a'] = 1
+    ...: mydict['b']['a'] = 2
+    ...: mydict['c']
+    ...: mydict['d']['a']['b'] = 0
+
+In [28]: mydict
+Out[28]:
+defaultdict(<function __main__.<lambda>()>,
+            {'a': 1,
+             'b': defaultdict(<function __main__.<lambda>()>, {'a': 2}),
+             'c': defaultdict(<function __main__.<lambda>()>, {}),
+             'd': defaultdict(<function __main__.<lambda>()>,
+                         {'a': defaultdict(<function __main__.<lambda>()>,
+                                      {'b': 0})})})
+```
