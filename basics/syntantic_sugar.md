@@ -140,4 +140,4 @@ x = x.__iadd__(y)
 x = type(x).__iadd__(x, y) # because the method will not be found on the object itself, only on the class
 ```
 
-REF: https://nedbatchelder.com/text/names1.html
+REF: https://nedbatchelder.com/text/names1.html, https://nedbatchelder.com/text/names1/names1.html#1
