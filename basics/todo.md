@@ -12,3 +12,5 @@ https://codesachin.wordpress.com/2016/06/09/the-magic-behind-attribute-access-in
 https://github.com/santiagobasulto/pycon-concurrency-tutorial-2020
 
 TODO: https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf
+
+* https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do?rq=1
