@@ -17,4 +17,4 @@ https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do?rq=1
 
 https://python-history.blogspot.com/2010/06/inside-story-on-new-style-classes.html
 
-Yield method https://hackernoon.com/the-magic-behind-python-generator-functions-bc8eeea54220 and https://haldir65.github.io/2018/11/11/2018-11-11-python-gil-and-what-you-can-do-about-it/
+Yield method https://hackernoon.com/the-magic-behind-python-generator-functions-bc8eeea54220 and https://haldir65.github.io/2018/11/11/2018-11-11-python-gil-and-what-you-can-do-about-it/ and https://nedbatchelder.com/text/iter.html
