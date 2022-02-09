@@ -7,6 +7,8 @@ print(my_list)         ->      my_list.__repr__()
 my_list == “value”     ->      my_list.__eq__(“value”)
 my_list[7]             ->      my_list.__getitem__(7)
 my_list[-1]            ->      my_list[len(my_list) - 1]
+
+# check type(my_list).__dict__ to see all the methods
 ```
 
 ```python
