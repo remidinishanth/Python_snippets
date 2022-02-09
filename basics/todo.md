@@ -13,4 +13,4 @@ https://github.com/santiagobasulto/pycon-concurrency-tutorial-2020
 
 TODO: https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf
 
-* https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do?rq=1
+https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do?rq=1
