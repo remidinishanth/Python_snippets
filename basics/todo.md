@@ -22,3 +22,7 @@ Yield method https://hackernoon.com/the-magic-behind-python-generator-functions-
 https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-finishing-your-morning-coffee-eb9c39e68958
 
 https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.c
+
+* a, b = b, a
+* `list` can store any type of data
+* `with` statement
