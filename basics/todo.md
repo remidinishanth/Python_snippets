@@ -44,6 +44,6 @@ print(*my_list)  # 1 2 3 4
 Awesome Internal things: https://rushter.com/blog/python-class-internals/
 
 
-* https://docs.python.org/2/reference/datamodel.html 
+* Python Data Model https://docs.python.org/2/reference/datamodel.html 
 
 A class has a namespace implemented by a dictionary object. Class attribute references are translated to lookups in this dictionary, e.g., `C.x` is translated to `C.__dict__["x"]` (although for new-style classes in particular there are a number of hooks which allow for other means of locating attributes). When the attribute name is not found there, the attribute search continues in the base classes.
