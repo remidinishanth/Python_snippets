@@ -26,6 +26,9 @@ https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.
 * a, b = b, a
 
 ```
+print(1_000_000_000)  # 1000000000
+print(1_234_567)  # 1234567
+
 my_list = [1, 2, 3, 4]
 print(my_list)  # [1, 2, 3, 4]
 print(*my_list)  # 1 2 3 4
