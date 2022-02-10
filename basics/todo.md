@@ -24,6 +24,6 @@ https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-fini
 https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.c
 
 * a, b = b, a
-* `list` can store any type of data
+* `list` can store any type of data, list pointing to itself
 * `with` statement
 * lru_cache
