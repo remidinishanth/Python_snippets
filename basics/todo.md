@@ -39,6 +39,7 @@ print(*my_list)  # 1 2 3 4
 * `list` can store any type of data, list pointing to itself
 * `with` statement
 * lru_cache
+* reference-counting scheme with (optional) delayed detection of cyclically linked garbage
 
 
 Awesome Internal things: https://rushter.com/blog/python-class-internals/
