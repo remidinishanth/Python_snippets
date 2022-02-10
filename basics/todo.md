@@ -23,7 +23,7 @@ https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-fini
 
 https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.c
 
-* a, b = b, a
+* parallel assignment `a, b = b, a`
 
 ```
 print(1_000_000_000)  # 1000000000
