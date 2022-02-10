@@ -39,3 +39,6 @@ print(*my_list)  # 1 2 3 4
 * `list` can store any type of data, list pointing to itself
 * `with` statement
 * lru_cache
+
+
+Awesome Internal things: https://rushter.com/blog/python-class-internals/
