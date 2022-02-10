@@ -24,6 +24,13 @@ https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-fini
 https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.c
 
 * a, b = b, a
+
+```
+my_list = [1, 2, 3, 4]
+print(my_list)  # [1, 2, 3, 4]
+print(*my_list)  # 1 2 3 4
+```
+
 * `_, *elements_in_the_middle, _ = [1, 2, 3, 4, 5, 6, 7, 8]`
 * `list` can store any type of data, list pointing to itself
 * `with` statement
