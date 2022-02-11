@@ -39,6 +39,7 @@ print(*my_list)  # 1 2 3 4
 * `list` can store any type of data, list pointing to itself
 * `with` statement
 * lru_cache
+* An assignment statement creates a symbolic name that you can use to reference an object. The statement `x = 'foo'` creates a symbolic name `x` that refers to the string object 'foo'. Ref: https://realpython.com/python-namespaces-scope/
 * object model, reference-counting scheme with (optional) delayed detection of cyclically linked garbage
 * import antigravity
 
