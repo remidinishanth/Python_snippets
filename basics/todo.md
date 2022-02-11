@@ -45,6 +45,7 @@ print(*my_list)  # 1 2 3 4
 * `_, *elements_in_the_middle, _ = [1, 2, 3, 4, 5, 6, 7, 8]`
 * last element of list, `my_list[-1]`
 * `list` can store any type of data, list pointing to itself
+* `1 < x < 3 < y < 4`
 * `with` statement
 * lru_cache
 * An assignment statement creates a symbolic name that you can use to reference an object. The statement `x = 'foo'` creates a symbolic name `x` that refers to the string object 'foo'. Ref: https://realpython.com/python-namespaces-scope/
