@@ -67,3 +67,5 @@ If a is an instance of super, then the binding super(B, obj).m() searches obj.__
 ```
 
 REF: https://docs.python.org/3/reference/datamodel.html#invoking-descriptors
+
+* https://medium.com/geekculture/10-amazing-facts-i-bet-you-didnt-know-about-python-programming-language-e5d426fabf13
