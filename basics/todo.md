@@ -45,6 +45,8 @@ print(*my_list)  # 1 2 3 4
 
 Awesome Internal things: https://rushter.com/blog/python-class-internals/
 
+* `globals()` Returns the `__dict__` of the calling module (i.e., the dictionary used as the global
+namespace at the point of call). 
 
 * Python Data Model https://docs.python.org/2/reference/datamodel.html 
 
