@@ -19,6 +19,9 @@ https://python-history.blogspot.com/2010/06/inside-story-on-new-style-classes.ht
 
 Yield method https://hackernoon.com/the-magic-behind-python-generator-functions-bc8eeea54220 and https://haldir65.github.io/2018/11/11/2018-11-11-python-gil-and-what-you-can-do-about-it/ and https://nedbatchelder.com/text/iter.html
 
+![image](https://user-images.githubusercontent.com/19663316/153640732-a2744c88-e42d-4a5c-96ab-28744e2ae01f.png)
+
+
 https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-finishing-your-morning-coffee-eb9c39e68958
 
 https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.c
