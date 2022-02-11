@@ -87,3 +87,6 @@ REF: https://docs.python.org/3/reference/datamodel.html#invoking-descriptors
 
 
 * Python objects are heap allocated and are not contiguous, nolocality, they are also huge(lot of overhead to store type, reference count, fixed bit integers etc), it's gonna use lot of memory.
+
+
+* Robert Carrington - C for Yourself: Exploring Python Internals at the REPL (PyTexas 2017)
