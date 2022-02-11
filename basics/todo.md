@@ -57,6 +57,8 @@ Awesome Internal things: https://rushter.com/blog/python-class-internals/
 * `globals()` Returns the `__dict__` of the calling module (i.e., the dictionary used as the global
 namespace at the point of call). 
 
+Good talk `The Python Datamodel: When and how to write objects`
+
 * Python Data Model https://docs.python.org/2/reference/datamodel.html 
 
 A class has a namespace implemented by a dictionary object. Class attribute references are translated to lookups in this dictionary, e.g., `C.x` is translated to `C.__dict__["x"]` (although for new-style classes in particular there are a number of hooks which allow for other means of locating attributes). When the attribute name is not found there, the attribute search continues in the base classes.
