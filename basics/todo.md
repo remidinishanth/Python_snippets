@@ -40,6 +40,7 @@ print(*my_list)  # 1 2 3 4
 * `with` statement
 * lru_cache
 * reference-counting scheme with (optional) delayed detection of cyclically linked garbage
+* import antigravity
 
 
 Awesome Internal things: https://rushter.com/blog/python-class-internals/
