@@ -30,6 +30,7 @@ https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-fini
 
 https://github.com/python/cpython/blob/main/Modules/_decimal/libmpdec/convolute.c
 
+* Dynamic typing. It stores that value at some memory location and then binds that variable name to that memory container.
 * parallel assignment `a, b = b, a`
 
 ```
