@@ -42,7 +42,7 @@ print(*my_list)  # 1 2 3 4
 ```
 
 * `_, *elements_in_the_middle, _ = [1, 2, 3, 4, 5, 6, 7, 8]`
-* last element of list
+* last element of list, `my_list[-1]`
 * `list` can store any type of data, list pointing to itself
 * `with` statement
 * lru_cache
