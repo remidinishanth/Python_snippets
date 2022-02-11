@@ -21,6 +21,8 @@ Yield method https://hackernoon.com/the-magic-behind-python-generator-functions-
 
 ![image](https://user-images.githubusercontent.com/19663316/153640732-a2744c88-e42d-4a5c-96ab-28744e2ae01f.png)
 
+Magic ability for functions to freeze in the middle of execution and resume later, it enables us to implement coroutines and iterators almost effortlessly.
+
 
 https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-finishing-your-morning-coffee-eb9c39e68958
 
