@@ -35,3 +35,26 @@ print(vars(c)) # or __dict__
 ['ClassVar', 'InstanceVar', '__doc__', '__init__', '__module__', 'func']
 {'InstanceVar': 1}
 ```
+
+
+```python
+class A(object):
+  attr = 'A'
+
+class B(A):
+  pass
+  
+class C(A):
+  attr = 'C'
+
+class D(B, C):
+  pass
+
+d = D()
+
+print(d.attr)
+print(d.__class__.mro())
+
+C
+[<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <type 'object'>]
+```
