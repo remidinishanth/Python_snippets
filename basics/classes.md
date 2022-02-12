@@ -35,6 +35,8 @@ print(vars(c)) # or __dict__
 # {'InstanceVar': 1}
 ```
 
+We can say that **changing class variables through class affect all instances**.
+
 ```python
 c1 = Class()
 c2 = Class()
@@ -43,7 +45,7 @@ Class.ClassVar = 3
 print(c1.ClassVar, c2.ClassVar) # (3, 3)
 ```
 
-Python creates a new instance variable with the same name as a class variable and instance variables have precedence over class variables when searching for an attribute value, hence the output i.e. value changes only for `c1.ClassVar`.
+Python creates a **new instance variable with the same name as a class variable** and instance variables have precedence over class variables when searching for an attribute value, hence the output i.e. value changes only for `c1.ClassVar`.
 
 ```python
 c1 = Class()
