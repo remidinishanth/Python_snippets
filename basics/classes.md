@@ -52,9 +52,8 @@ class D(B, C):
 
 d = D()
 
-print(d.attr)
+print(d.attr) ## C
 print(d.__class__.mro())
 
-C
-[<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <type 'object'>]
+# [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <type 'object'>]
 ```
