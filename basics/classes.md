@@ -50,6 +50,8 @@ c1 = Class()
 c2 = Class()
 print(c1.ClassVar, c2.ClassVar) # (0, 0)
 c1.ClassVar = 3
+# vars(c1) {'InstanceVar': 1, 'ClassVar': 3}
+# vars(c2) {'InstanceVar': 1}
 print(c1.ClassVar, c2.ClassVar) # (3, 0)
 ```
 
