@@ -92,3 +92,17 @@ REF: https://docs.python.org/3/reference/datamodel.html#invoking-descriptors
 * Robert Carrington - C for Yourself: Exploring Python Internals at the REPL (PyTexas 2017)
 
 * https://www.machinelearningplus.com/python/what-does-yield-keyword-do/ See the last example
+
+
+### Python Runtime stack and Frames
+
+When the computer returns from a function, it picks up where it left off before the function call.How does this work?
+
+Answer: the run time stack—or just the stack for short. 
+
+The run time stack includes two kinds of things:
+* call frames—one for each function call
+* storage for local variables.
+
+
+REF: https://sites.cs.ucsb.edu/~pconrad/cs8/topics.beta/theStack/02/
