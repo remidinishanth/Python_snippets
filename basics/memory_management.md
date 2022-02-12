@@ -72,7 +72,10 @@ There are a few ways to increase the reference count for an object, such as
 
 ### type PyObject
 
-All object types are extensions of this type. This is a type which contains the information Python needs to treat a pointer to an object as an object. In a normal “release” build, it contains only the object’s reference count `ob_refcnt` and a pointer to the corresponding type object `*ob_type` . Nothing is actually declared to be a PyObject, but every pointer to a Python object can be cast to a `PyObject*`. Access to the members must be done by using the macros `Py_REFCNT` and `Py_TYPE`.
+* `PyObject` - All object types are extensions of this type. 
+* This is a type which contains the information Python needs to treat a **pointer to an object as an object**. 
+
+In a normal “release” build, it contains only the object’s reference count `ob_refcnt` and a pointer to the corresponding type object `*ob_type` . Nothing is actually declared to be a PyObject, but every pointer to a Python object can be cast to a `PyObject*`. Access to the members must be done by using the macros `Py_REFCNT` and `Py_TYPE`.
 
 ```c
 /* Nothing is actually declared to be a PyObject, but every pointer to
@@ -85,12 +88,14 @@ typedef struct _object {
     Py_ssize_t ob_refcnt;
     PyTypeObject *ob_type;
 } PyObject;
-
 ```
 
 The reference count is used for garbage collection. Then you have a pointer to the actual object type. That object type is just another struct that describes a Python object (such as a dict or int).
 
 Each object has its own object-specific memory allocator that knows how to get the memory to store that object. Each object also has an object-specific memory deallocator that “frees” the memory once it’s no longer needed.
+
+
+`PyVarObject` is an extension of PyObject that adds the ob_size field. This is only used for objects that have some notion of length. REF: https://docs.python.org/2/c-api/structures.html#c.PyVarObject
 
 `_PyObject_HEAD_EXTRA` is for debugging
 
