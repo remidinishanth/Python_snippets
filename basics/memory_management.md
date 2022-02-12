@@ -1,6 +1,19 @@
 Nina Zakharenko - Memory Management in Python - The Basics - PyCon 2016
 source: https://www.slideshare.net/nnja/memory-management-in-python-the-basics
 
+```python
+a = 50
+b = 50
+print(a is b)
+
+c = 500
+d = 500
+print(c is d) # False
+
+# Python recycles common objects
+# CPython keeps a global list of all the integers in the range [-5, 256].
+```
+
 The following information is for CPython implementation of Python, you can check the implementation of python as follows
 
 ```python
