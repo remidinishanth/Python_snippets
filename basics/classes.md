@@ -1,5 +1,7 @@
 ## TODO: https://www.programiz.com/article/python-self-why
 
+Ref: https://rushter.com/blog/python-class-internals/
+
 Also cover basics of `__new__` and metaclasses
 
 ```python
