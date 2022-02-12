@@ -95,7 +95,7 @@ The reference count is used for garbage collection. Then you have a pointer to t
 Each object has its own object-specific memory allocator that knows how to get the memory to store that object. Each object also has an object-specific memory deallocator that “frees” the memory once it’s no longer needed.
 
 
-`PyVarObject` is an extension of PyObject that adds the ob_size field. This is only used for objects that have some notion of length. REF: https://docs.python.org/2/c-api/structures.html#c.PyVarObject
+`PyVarObject` is an extension of `PyObject` that adds the `ob_size` field. This is only used for objects that have some notion of length. REF: https://docs.python.org/2/c-api/structures.html#c.PyVarObject
 
 `_PyObject_HEAD_EXTRA` is for debugging
 
