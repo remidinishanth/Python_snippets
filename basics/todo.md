@@ -90,3 +90,5 @@ REF: https://docs.python.org/3/reference/datamodel.html#invoking-descriptors
 
 
 * Robert Carrington - C for Yourself: Exploring Python Internals at the REPL (PyTexas 2017)
+
+* https://www.machinelearningplus.com/python/what-does-yield-keyword-do/ See the last example
