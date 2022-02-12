@@ -12,6 +12,11 @@ my_list[-1]            ->      my_list[len(my_list) - 1]
 ```
 
 ```python
+setattr(object, name, value)
+setattr(x, 'foobar', 123)  -> x.foobar = 123
+```
+
+```python
 @decorator # syntax    ->      func = decorator(func)
 ```
 
