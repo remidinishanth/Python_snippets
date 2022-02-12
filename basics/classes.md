@@ -20,11 +20,10 @@ Use `dir(...)` and `vars(...)` to understand them better
 
 ```python
 print(dir(Class))
+# ['ClassVar', '__doc__', '__init__', '__module__', 'func']
+
 print(vars(Class)) # or __dict__
-
-
-['ClassVar', '__doc__', '__init__', '__module__', 'func']
-{'__module__': '__main__', 'ClassVar': 0, 'func': <function func at 0x0000000002C5AEB8>, '__init__': <function __init__ at 0x0000000002C5AE48>, '__doc__': None}
+# {'__module__': '__main__', 'ClassVar': 0, 'func': <function func at 0x0000000002C5AEB8>, '__init__': <function __init__ at 0x0000000002C5AE48>, '__doc__': None}
 ```
 
 ```python
@@ -32,8 +31,8 @@ print(dir(c))
 print(vars(c)) # or __dict__
 
 
-['ClassVar', 'InstanceVar', '__doc__', '__init__', '__module__', 'func']
-{'InstanceVar': 1}
+# ['ClassVar', 'InstanceVar', '__doc__', '__init__', '__module__', 'func']
+# {'InstanceVar': 1}
 ```
 
 
@@ -53,7 +52,7 @@ class D(B, C):
 d = D()
 
 print(d.attr) # C
-print(d.__class__.mro())
 
+print(d.__class__.mro())
 # [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <type 'object'>]
 ```
