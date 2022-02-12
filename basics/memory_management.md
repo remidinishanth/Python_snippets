@@ -5,7 +5,7 @@ The following information is for CPython implementation of Python, you can check
 
 ```python
 >>> import platform
->>> print(platform.python_imlplementation())
+>>> print(platform.python_implementation())
 CPython
 ```
 
