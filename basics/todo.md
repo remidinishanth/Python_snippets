@@ -109,3 +109,5 @@ REF: https://sites.cs.ucsb.edu/~pconrad/cs8/topics.beta/theStack/02/
 
 
 TODO: Python integer object memory http://www.laurentluce.com/posts/python-integer-objects-implementation/
+
+* https://stackoverflow.com/questions/15849399/self-referencing-lists Self referencing lists
