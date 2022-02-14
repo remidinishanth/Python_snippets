@@ -106,3 +106,6 @@ The run time stack includes two kinds of things:
 
 
 REF: https://sites.cs.ucsb.edu/~pconrad/cs8/topics.beta/theStack/02/
+
+
+TODO: Python integer object memory http://www.laurentluce.com/posts/python-integer-objects-implementation/
