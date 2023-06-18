@@ -9,3 +9,5 @@ Python types & metaclasses made simple. (Har har)
 * [Change Python MRO at Runtime](https://stackoverflow.com/questions/20822850/change-python-mro-at-runtime) taught me an awesome hack for dynamically changing the MRO of a class.
 * [The abc Module Docs](https://docs.python.org/3/library/abc.html) describes a custom metaclass in the core library.
 * [The Descriptor HowTo](https://docs.python.org/3/howto/descriptor.html) describes how descriptors work in a prosaic style.
+
+Check out https://devtut.github.io/python/shelve.html#creating-a-new-shelf
